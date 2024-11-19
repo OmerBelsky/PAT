@@ -54,6 +54,7 @@ def build_test_trec_data_from_qrel_and_queries():
 
 def gen_input_from_csv_to_pkl():
     csv_path = data_folder + "/trec_dl2019_passage_test1000_full.tsv"
+    # csv_path = data_folder + "msmarco-passagetest2019-top1000.tsv"
     pkl_path = data_folder + "/trec_dl2019_passage_test1000_full.pkl"
     sample_df = pd.read_csv(csv_path, sep="\t", names=["qid", "did", "query", "passage", "label"], header=0)
     instances = []
@@ -90,5 +91,5 @@ def transform_qrels():
 if __name__ == "__main__":
     transform_qrels()
 
-    # build_test_trec_data_from_qrel_and_queries()
-    # gen_input_from_csv_to_pkl()
+    build_test_trec_data_from_qrel_and_queries()
+    gen_input_from_csv_to_pkl()

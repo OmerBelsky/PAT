@@ -90,7 +90,7 @@ def main():
     data_obj = Imitation_Dataset(tokenizer=tokenizer, sample_config_tail=args.sample_config, victim=args.imitate_model_name)
 
     # load fine-tuned pairwise ranker
-    start_model_path = curdir + '/saved_models/' + model.__class__.__name__ + '.' + args.transformer_model + '.dl714.ms381.pth'
+    start_model_path = curdir + '/saved_models/' + model.__class__.__name__ + '.' + args.transformer_model + '.pth' #'.dl714.ms381.pth'
     # start_model_path = curdir + '/saved_models/' + model.__class__.__name__ + '.nq.' + args.transformer_model + '.pth'
 
     # model_path = curdir + '/saved_models/Imitation.distilbert.cat.further_train.' + model.__class__.__name__ + '.' + args.transformer_model + '.pth'
@@ -101,7 +101,7 @@ def main():
     # model_path = curdir + '/saved_models/Imitation.MiniLM.further.' + model.__class__.__name__ + '.' + sample_config_tail + '.' + args.transformer_model + '.pth'
     # model_path = curdir + '/saved_models/Imitation.MiniLM.further.nq.' + model.__class__.__name__ + '.' + sample_config_tail + '.' + args.transformer_model + '.pth'
     # model_path = curdir + '/saved_models/Imitation.' + imitate_model_name + '.further.nq.' + model.__class__.__name__ + '.' + sample_config_tail + '.' + args.transformer_model + '.pth'
-    model_path = curdir + '/saved_models/Imitation.' + imitate_model_name + '.further.' + model.__class__.__name__ + '.' + sample_config_tail + '.' + args.transformer_model + '.pth'
+    model_path = curdir + '/saved_models/Imitation.' + args.imitate_model_name + '.further.' + model.__class__.__name__ + '.' + args.sample_config + '.' + args.transformer_model + '.pth'
 
     # log directory
     log_dir = curdir + '/logs'
@@ -109,7 +109,7 @@ def main():
         os.mkdir(log_dir)
     now_time = '_'.join(time.asctime(time.localtime(time.time())).split()[:3])
 
-    log_path = log_dir + '/imitation.pairwise.mspr.' + sample_config_tail + '.' + now_time + '.' + args.mode + '.log'
+    log_path = log_dir + '/imitation.pairwise.mspr.' + args.sample_config + '.' + now_time + '.' + args.mode + '.log'
     args.run_id = 'imitation.' + args.transformer_model + '.pairwise.' + now_time
     tensorboard_dir = curdir + '/tensorboard_dir/imitation_pairwise_triples_' + args.transformer_model + '/'
 

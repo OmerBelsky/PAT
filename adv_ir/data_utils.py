@@ -8,6 +8,7 @@ prodir = os.path.dirname(curdir)
 
 import pandas as pd
 import pickle as pkl
+import random
 
 mspr_data_folder = prodir + '/data/msmarco_passage'
 ranker_results_dir = prodir + '/bert_ranker/results/runs'
@@ -27,6 +28,10 @@ def pick_target_query_doc_and_best_scores(target_name='imitate.v2',
             run_file = ranker_results_dir + '/runs.ms-marco-MiniLM-L-12-v2.public.bert.msmarco.dl2019.csv'
         elif target_name == 'large':
             run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.dl2019.csv'
+        elif target_name == 'rank_vicuna':
+            run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.rank_vicuna_dl2019.csv'
+        elif target_name == 'rank_zephyr':
+            run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.rank_zephyr_dl2019.csv'
         else:
             raise ValueError("Experiment name Error!")
     else:
@@ -45,7 +50,14 @@ def pick_target_query_doc_and_best_scores(target_name='imitate.v2',
 
     # get target query and tail passages with its rank
     for qid in target_q_dict.keys():
-        least_query_scores = target_q_dict[qid][-least_num:]
+        if len(target_q_dict[qid]) < 100:
+            continue
+        # least_query_scores = target_q_dict[qid][-least_num:]
+        random.seed(42)
+        random_numbers = []
+        for i in range(10, 100, 10):
+            random_numbers.append(random.randint(i, i + 9))
+        least_query_scores = [target_q_dict[qid][r] for r in random_numbers] # New attack instead of taking bottom 5 docs, take random 9 from top 100 in ranges of 10
         for pid, rank, score in least_query_scores:
             target_q_pid[qid][pid] = (rank, score)
         for pid, _, t_socre in target_q_dict[qid]:
@@ -55,11 +67,6 @@ def pick_target_query_doc_and_best_scores(target_name='imitate.v2',
     best_query_score = {}
     all_qid_list = list(target_q_dict.keys())
     for qid in all_qid_list:
-        if len(target_q_dict[qid]) < 100:
-            target_q_pid.pop(qid)
-            query_scores.pop(qid)
-            all_qid_pid_dict.pop(qid)
-            continue
         top_query_scores = target_q_dict[qid][:top_k]
         scores = [t[2] for t in top_query_scores]
         pids = [t[0] for t in top_query_scores]
@@ -124,7 +131,6 @@ def prepare_data_and_scores(target_name='mini',
             best_query_sent = pkl.load(f)
             queries = pkl.load(f)
             passages_dict = pkl.load(f)
-
     return target_q_pid, query_scores, best_query_sent, queries, passages_dict
 
 

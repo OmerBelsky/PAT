@@ -44,7 +44,7 @@ class MSMARCO_PR_Pair_Dataset(object):
             train_instances = []
             train_labels = []
             for _, rows in tqdm(train_df.iterrows(), total=len(train_df)):
-                train_instances.append((rows["query"], rows["pos"]))
+                train_instances.append((rows["query"], rows["pos"])) 
                 train_labels.append(1)
                 train_instances.append((rows["query"], rows["neg"]))
                 train_labels.append(0)
@@ -231,7 +231,6 @@ class MSMARCO_PR_Pair_Dataset(object):
             tmp_qids = qids[i: i + batch_size]
             tmp_pids = pids[i: i + batch_size]
             tmp_labels = torch.tensor(labels[i: i + batch_size], dtype=torch.long)
-
             batch_encoding_pos = self.tokenizer([(e[0], e[1]) for e in tmp_examples],
                                                 max_length=max_seq_len, padding="max_length", truncation=True,
                                                 return_tensors='pt')

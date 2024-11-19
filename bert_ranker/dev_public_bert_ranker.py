@@ -61,6 +61,7 @@ def main():
     now_time = '_'.join(time.asctime(time.localtime(time.time())).split()[:3])
     args.run_id = args.transformer_model + '.public.bert.msmarco.' + now_time
     output_dir = curdir + '/results'
+    os.makedirs(output_dir, exist_ok=True)
 
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
@@ -86,6 +87,68 @@ def main():
         model = AutoModelForSequenceClassification.from_pretrained("cross-encoder/ms-marco-MiniLM-L-12-v2")
 
     data_obj = MSMARCO_PR_Pair_Dataset(tokenizer=tokenizer)
+    if args.mode.startswith('rank_vicuna_') or args.mode.startswith('rank_zephyr_'):
+        del model
+        from rank_llm.data import Query, Candidate, Request
+        from rank_llm.rerank.listwise import vicuna_reranker, zephyr_reranker
+
+        collection_df = pd.read_csv(prodir + '/data/msmarco_passage/collection.tsv', sep='\t', header=None,
+                                    names=['pid', 'passage'])
+        collection_df.set_index('pid', inplace=True)
+        if args.mode.endswith('dl2019'):
+            queries_df = pd.read_csv(prodir + '/data/trec_dl_2019/queries.eval.tsv', sep='\t', header=None, names=['qid', 'query'])
+            queries_df.set_index('qid', inplace=True)
+        if args.mode.endswith('eval_full_dev1000'):
+            queries_df = pd.read_csv(prodir + '/data/trec_dl_2019/queries.dev.tsv', sep='\t', header=None, names=['qid', 'query'])
+            queries_df.set_index('qid', inplace=True)
+        llm_mode = 'rank_vicuna_' if 'vicuna' in args.mode else 'rank_zephyr_'
+        mode = args.mode.split(llm_mode)[1]
+        qids = []
+        pids = []
+        for _, _, tmp_qids, tmp_pids in data_obj.data_generator_mono_dev(mode=mode,
+                                                                                               batch_size=args.val_batch_size,
+                                                                                               max_seq_len=args.max_seq_len):
+            qids += tmp_qids
+            pids += tmp_pids
+        del data_obj
+        del tokenizer
+        torch.cuda.empty_cache()
+        
+        if llm_mode == 'rank_vicuna_':
+            rr_llm = vicuna_reranker.VicunaReranker(num_gpus=2)
+        else:
+            rr_llm = zephyr_reranker.ZephyrReranker(num_gpus=2)
+        pairs_df = pd.DataFrame({'qid': qids, 'pid': pids})
+        final_df = []
+        for qid in pairs_df['qid'].unique():
+            query = queries_df.loc[qid, 'query']
+            # get all pid, passage pairs for this query
+            hits = []
+            for _, row in pairs_df[pairs_df['qid'] == qid].iterrows():
+                pid = row['pid']
+                passage = collection_df.loc[pid, 'passage']
+                hits.append((pid, passage, 0.0))
+            q = Query(query, qid)
+            candidates = [Candidate(docid, score, {'contents': doc}) for docid, doc, score in hits]
+            r = Request(query=q, candidates=candidates)
+            result = rr_llm.rerank_batch(requests=[r], rank_end=len(candidates))[0]
+            for i, candidate in enumerate(result.candidates):
+                final_df.append((qid, candidate.docid, i + 1, candidate.score))
+        final_df = pd.DataFrame(final_df, columns=['qid', 'pid', 'rank', 'score'])
+        pairs_df = pairs_df.merge(final_df, on=['qid', 'pid'])
+        pairs_df['Q0'] = 'Q0'
+        pairs_df['runid'] = 'Rank_Vicuna' if llm_mode == 'rank_vicuna_' else 'Rank_Zephyr'
+        df_save_path = output_dir + '/runs/runs.' + args.run_id + '.' + args.mode + '.csv'
+        pairs_df[['qid', 'Q0', 'pid', 'rank', 'score', 'runid']].sort_values(['qid', 'rank']).to_csv(df_save_path, sep='\t', index=False, header=False)
+
+        # take only the top 100 per qid and save to seperate file
+        top_100 = pairs_df[pairs_df['rank'] <= 100]
+        df_save_path = output_dir + "/run." + args.run_id + '.' + args.mode + ".csv"
+        top_100[['qid', 'pid', 'rank']].sort_values(['qid', 'rank']).to_csv(df_save_path, sep='\t', index=False, header=False)
+        return
+
+
+
 
     model.to(device)
     model = amp.initialize(model, opt_level='O1')
@@ -195,7 +258,9 @@ def main():
                 for rank, (t_qid, t_pid, t_score) in enumerate(zip(sorted_qids, sorted_pids, sorted_scores)):
                     runs_list.append((t_qid, 'Q0', t_pid, rank + 1, t_score, 'BERT-Point'))
             runs_df = pd.DataFrame(runs_list, columns=["qid", "Q0", "pid", "rank", "score", "runid"])
-            runs_df.to_csv(output_dir + '/runs/runs.' + args.run_id + '.' + args.mode + '.csv', sep='\t', index=False,
+            df_save_path = output_dir + '/runs/runs.' + args.run_id + '.' + args.mode + '.csv'
+            os.makedirs(output_dir + '/runs', exist_ok=True)
+            runs_df.to_csv(df_save_path, sep='\t', index=False,
                            header=False)
 
 

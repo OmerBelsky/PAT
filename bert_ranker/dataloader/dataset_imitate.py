@@ -38,12 +38,21 @@ class Imitation_Dataset(object):
         self.test_trec_mb_2014_path = prodir + '/data/trec_mb_2014/trec_mb_2014.pkl'
 
     def _load_from_triples_to_pairwise(self):
+        print(self.victim)
         if self.victim == 'MiniLM':
             pkl_path = self.ms_folder_name + '/triples_from_runs/minilm_l12_sampled_triples_text.{}.pkl'.format(
                 self.sample_config_tail)
             triples_from_runs = self.triples_from_runs_minilm_l12_v2
         elif self.victim == 'bert_large':
             pkl_path = self.ms_folder_name + '/triples_from_runs/bert_large_sampled_triples_text.{}.pkl'.format(
+                self.sample_config_tail)
+            triples_from_runs = self.triples_from_runs_bert_large
+        elif self.victim == 'rank_vicuna':
+            pkl_path = self.ms_folder_name + '/triples_from_runs/rank_vicuna_sampled_triples_text.{}.pkl'.format(
+                self.sample_config_tail)
+            triples_from_runs = self.triples_from_runs_bert_large
+        elif self.victim == 'rank_zephyr':
+            pkl_path = self.ms_folder_name + '/triples_from_runs/rank_zephyr_sampled_triples_text.{}.pkl'.format(
                 self.sample_config_tail)
             triples_from_runs = self.triples_from_runs_bert_large
         else:
@@ -72,7 +81,7 @@ class Imitation_Dataset(object):
         print("Total of {} instances are loaded.".format(len(train_labels)))
         return train_instances, train_labels
 
-    def data_generator_pairwise_triple(self, mode='train', random_seed=666, batch_size=32,
+    def data_generator_pairwise_triple(self, mode='train', epoch_sample_num=None, random_seed=666, batch_size=32,
                                        max_seq_len=128):
         if mode == 'train':
             examples, labels = self._load_from_triples_to_pairwise()

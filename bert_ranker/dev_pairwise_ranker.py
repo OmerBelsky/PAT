@@ -84,7 +84,7 @@ def main():
         # zero_or_warm = 'further.nq'
         # zero_or_warm = 'further'
         # zero_or_warm = 'straight'
-        model_path = curdir + '/saved_models/Imitation.' + args.imitate_model_name + '.' + args.zero_or_warm + '.' + model.__class__.__name__ + '.' + args.sample_config_tail + '.' + args.transformer_model + '.pth'
+        model_path = curdir + '/saved_models/Imitation.' + args.imitate_model_name + '.' + args.zero_or_warm + '.' + model.__class__.__name__ + '.' + args.sample_config + '.' + args.transformer_model + '.pth'
 
     else:
         model_path = curdir + '/saved_models/' + model.__class__.__name__ + '.' + args.transformer_model + '.pth'
@@ -175,7 +175,7 @@ def main():
                     run_list.append((t_qid, t_pid, rank + 1))
             run_df = pd.DataFrame(run_list, columns=["qid", "pid", "rank"])
             run_df.to_csv(
-                output_dir + "/run." + args.run_id + '.' + args.mode + '_' + args.imitate_model_name + '_' + args.zero_or_warm + '.' + args.sample_config_tail + '.' + str(
+                output_dir + "/run." + args.mode + '_' + args.imitate_model_name + '_' + args.zero_or_warm + '.' + args.sample_config + '.' + str(
                     args.max_seq_len) + ".csv", sep='\t', index=False, header=False)
 
             # For TREC eval
@@ -189,7 +189,7 @@ def main():
                     runs_list.append((t_qid, 'Q0', t_pid, rank + 1, t_score, 'BERT-Pair'))
             runs_df = pd.DataFrame(runs_list, columns=["qid", "Q0", "pid", "rank", "score", "runid"])
             runs_df.to_csv(
-                output_dir + '/runs/runs.' + args.run_id + '.' + args.mode + '_' + args.imitate_model_name + '_' + args.zero_or_warm + '.' + args.sample_config_tail + '.' + str(
+                output_dir + '/runs/runs.' + args.mode + '_' + args.imitate_model_name + '_' + args.zero_or_warm + '.' + args.sample_config + '.' + str(
                     args.max_seq_len) + '.csv', sep='\t', index=False, header=False)
 
 

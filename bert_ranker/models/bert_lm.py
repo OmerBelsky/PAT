@@ -8,7 +8,9 @@ import torch
 from transformers import BertModel, BertForSequenceClassification,  BertForNextSentencePrediction, BertForMaskedLM
 from transformers.models.bert.modeling_bert import BertSelfAttention, BertAttention, BertLayer, BertEncoder
 from transformers.models.distilbert.modeling_distilbert import MultiHeadSelfAttention, TransformerBlock, Transformer
-
+# import torch nn
+import torch.nn as nn
+import math
 
 class BertSelfAttentionPast(BertSelfAttention):
     def forward(

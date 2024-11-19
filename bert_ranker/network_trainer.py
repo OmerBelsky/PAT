@@ -270,7 +270,7 @@ class Trainer(object):
         all_softmax_logits, _ = bert_ranker_utils.accumulate_list_by_qid(all_softmax_logits, all_qids)
         all_pids, all_qids = bert_ranker_utils.accumulate_list_by_qid(all_pids, all_qids)
 
-        res = metrics.evaluate_and_aggregate(all_logits, all_labels, ['ndcg_cut_10', 'map', 'recip_rank', 'MRR@10'])
+        res = metrics.evaluate_and_aggregate(all_logits, all_labels, ['ndcg_cut_10', 'map', 'recip_rank'])#, 'MRR@10'])
         for metric, v in res.items():
             print("\n{} {} : {:3f}".format(mode, metric, v))
             self.logger.info("{} {} : {:3f}".format(mode, metric, v))

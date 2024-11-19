@@ -78,8 +78,8 @@ def logits_perturbation(
 
 def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device, lm_model=None, args=None,
                             nsp_model=None):
-    input_mask = torch.zeros(tokenizer.vocab_size, device=device)
-    sims = find_sims(query, model, tokenizer, device, k=args.num_sims)
+    input_mask = torch.zeros(tokenizer.vocab_size, device=device, dtype=torch.bfloat16)
+    sims = find_sims(query, model, tokenizer, device, k=args.num_sim)
     best_ids = get_inputs_sim_ids(anchor, tokenizer)
     input_mask[best_ids] = 0.68
 
@@ -91,7 +91,7 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
     input_mask[unk_ids] = -1e9
 
     sim_ids = [tokenizer.vocab[w] for w in tokenizer.vocab if not w.isalnum()]
-    first_mask = torch.zeros_like(input_mask)
+    first_mask = torch.zeros_like(input_mask, dtype=torch.bfloat16)
     first_mask[sim_ids] = -1e9
 
     trigger_init = tokenizer.convert_tokens_to_ids([BOS_TOKEN])
@@ -100,41 +100,41 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
     repetition_penalty = 5.0
     curr_len = len(trigger_init)
 
-    beam_scores = torch.zeros((num_beams,), dtype=torch.float, device=device)
+    beam_scores = torch.zeros((num_beams,), dtype=torch.bfloat16, device=device)
     beam_scores[1:] = -1e9
 
-    output_so_far = torch.tensor([trigger_init] * num_beams, device=device)
+    output_so_far = torch.tensor([trigger_init] * num_beams, device=device, dtype=torch.bfloat16)
     past = None
     vocab_size = tokenizer.vocab_size
     topk = args.topk
     query_ids = tokenizer.encode(query, add_special_tokens=True)
 
-    query_ids = torch.tensor(query_ids, device=device).unsqueeze(0)
+    query_ids = torch.tensor(query_ids, device=device, dtype=torch.bfloat16).unsqueeze(0)
     batch_query_ids = torch.cat([query_ids] * topk, 0)
-    sep_tensor = torch.tensor([tokenizer.sep_token_id] * topk, device=device)
+    sep_tensor = torch.tensor([tokenizer.sep_token_id] * topk, device=device, dtype=torch.bfloat16)
 
     is_first = True
     word_embedding = model.get_input_embeddings().weight.detach().cpu()
     # prevent waste GPU memory in one-hot transformation
     word_embedding_cuda = model.get_input_embeddings().weight.detach()
 
-    batch_sep_embeds = word_embedding_cuda[sep_tensor].unsqueeze(1)
+    batch_sep_embeds = word_embedding_cuda[sep_tensor.long()].unsqueeze(1)
     batch_labels = torch.ones((num_beams,), dtype=torch.long, device=device)
 
-    anchor_ids = torch.tensor(tokenizer.encode(anchor, add_special_tokens=True)[1:]).unsqueeze(0)
+    anchor_ids = torch.tensor(tokenizer.encode(anchor, add_special_tokens=True)[1:], dtype=torch.bfloat16).unsqueeze(0)
     batch_anchor_ids = torch.cat([anchor_ids[:128]] * args.topk, 0)
 
     def ids_to_emb(input_ids):
         input_ids = input_ids.clone().detach().cpu()
-        input_ids_one_hot = torch.nn.functional.one_hot(input_ids, vocab_size).float()
+        input_ids_one_hot = torch.nn.functional.one_hot(input_ids.long(), vocab_size).to(torch.bfloat16)
         input_emb = torch.einsum('blv,vh->blh', input_ids_one_hot, word_embedding)
-        return input_emb.to(device)
+        return input_emb.to(device, dtype=torch.bfloat16)
 
     if args.nsp:
         # raw passage transform to ids
         passage_ids = tokenizer.encode(raw_passage, add_special_tokens=True)
         # do not remove [CLS]
-        passage_ids = torch.tensor(passage_ids[:128]).unsqueeze(0)
+        passage_ids = torch.tensor(passage_ids[:128], dtype=torch.bfloat16).unsqueeze(0)
         batch_passage_ids = torch.cat([passage_ids] * args.topk, 0)
         batch_passage_embds = ids_to_emb(batch_passage_ids)
 
@@ -143,12 +143,12 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
     concat_inputs_emb_neg = torch.cat([batch_query_emb, batch_anchor_emb], dim=1)
 
     def classifier_loss(p, context):
-        context = torch.nn.functional.one_hot(context, len(word_embedding))
-        one_hot = torch.cat([context.float(), p.unsqueeze(1)], dim=1)
-        x = torch.einsum('blv,vh->blh', one_hot, word_embedding_cuda)
+        context = torch.nn.functional.one_hot(context.long(), len(word_embedding)).to(torch.bfloat16)
+        one_hot = torch.cat([context.float(), p.unsqueeze(1)], dim=1).to(torch.bfloat16)
+        x = torch.einsum('blv,vh->blh', one_hot, word_embedding_cuda).to(torch.bfloat16)
         # add [SEP]
-        x = torch.cat([x, batch_sep_embeds[:num_beams]], dim=1)
-        concat_inputs_emb_pos = torch.cat([batch_query_emb[:num_beams], x], dim=1)
+        x = torch.cat([x, batch_sep_embeds[:num_beams]], dim=1).to(torch.bfloat16)
+        concat_inputs_emb_pos = torch.cat([batch_query_emb[:num_beams], x], dim=1).to(torch.bfloat16)
 
         outputs = model(
             inputs_embeds_pos=concat_inputs_emb_pos,
@@ -163,7 +163,7 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
     trigger_cands = []
 
     while (curr_len - start_idx) < args.tri_len:
-        model_inputs = lm_model.prepare_inputs_for_generation(output_so_far, past=past)
+        model_inputs = lm_model.prepare_inputs_for_generation(output_so_far.long(), past=past)
         outputs = lm_model(**model_inputs)
         present = outputs[1]
         # [B * Beams, V]
@@ -186,7 +186,7 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
             )
 
         if repetition_penalty > 1.0:
-            lm_model.enforce_repetition_penalty_(next_token_logits, 1, num_beams, output_so_far, repetition_penalty)
+            lm_model.enforce_repetition_penalty_(next_token_logits, 1, num_beams, output_so_far.long(), repetition_penalty)
         next_token_logits = next_token_logits / args.stemp
 
         # [B * Beams, V]
@@ -196,28 +196,28 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
         next_clf_scores = []
         next_nsp_scores = []
         for i in range(num_beams):
-            next_beam_scores = torch.zeros(tokenizer.vocab_size, device=device) - 1e9
+            next_beam_scores = torch.zeros(tokenizer.vocab_size, device=device, dtype=torch.bfloat16) - 1e9
             if args.nsp:
-                next_beam_nsp_losses = torch.zeros(tokenizer.vocab_size, device=device) - 1e9
+                next_beam_nsp_losses = torch.zeros(tokenizer.vocab_size, device=device, dtype=torch.bfloat16) - 1e9
             if output_so_far.shape[1] > start_idx:
                 curr_beam_topk = output_so_far[i, start_idx:].unsqueeze(0).expand(topk,
                                                                                   output_so_far.shape[1] - start_idx)
                 # [topk, curr_len + next_token + sep]
-                curr_beam_topk = torch.cat([curr_beam_topk, topk_tokens[i].unsqueeze(1), sep_tensor.unsqueeze(1)], 1)
+                curr_beam_topk = torch.cat([curr_beam_topk, topk_tokens[i].unsqueeze(1), sep_tensor.unsqueeze(1)], 1).to(torch.bfloat16)
             else:
-                curr_beam_topk = torch.cat([topk_tokens[i].unsqueeze(1), sep_tensor.unsqueeze(1)], 1)
+                curr_beam_topk = torch.cat([topk_tokens[i].unsqueeze(1), sep_tensor.unsqueeze(1)], 1).to(torch.bfloat16)
 
-            concat_input_ids_pos = torch.cat([batch_query_ids, curr_beam_topk], 1)
-            token_type_ids_pos = torch.cat([torch.zeros_like(batch_query_ids), torch.ones_like(curr_beam_topk)], 1)
+            concat_input_ids_pos = torch.cat([batch_query_ids, curr_beam_topk], 1).to(torch.bfloat16)
+            token_type_ids_pos = torch.cat([torch.zeros_like(batch_query_ids), torch.ones_like(curr_beam_topk)], 1).to(torch.bfloat16)
 
             clf_logits = model(
-                input_ids_pos=concat_input_ids_pos,
-                token_type_ids_pos=token_type_ids_pos,
-                input_ids_neg=concat_input_ids_pos,
-                token_type_ids_neg=token_type_ids_pos
+                input_ids_pos=concat_input_ids_pos.long(),
+                token_type_ids_pos=token_type_ids_pos.long(),
+                input_ids_neg=concat_input_ids_pos.long(),
+                token_type_ids_neg=token_type_ids_pos.long()
             )[0]
-            clf_scores = torch.log_softmax(clf_logits, -1)[:, 1].detach()
-            next_beam_scores.scatter_(0, topk_tokens[i], clf_scores.float())
+            clf_scores = torch.log_softmax(clf_logits, -1)[:, 1].detach().to(torch.bfloat16)
+            next_beam_scores.scatter_(0, topk_tokens[i].long(), clf_scores)#.float())
             next_clf_scores.append(next_beam_scores.unsqueeze(0))
 
             if args.nsp:
@@ -226,13 +226,13 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
                     ids_to_emb(curr_beam_topk)], dim=1)[:, :128, :]
                 nsp_logits = nsp_model(inputs_embeds=concat_nsp_embs, return_dict=True)["logits"]
                 # 0 indicates sequence B is a continuation of sequence A,
-                nsp_scores = torch.log_softmax(nsp_logits, -1)[:, 1].detach()
-                next_beam_nsp_losses.scatter_(0, topk_tokens[i], nsp_scores.float())
+                nsp_scores = torch.log_softmax(nsp_logits, -1)[:, 1].detach().to(torch.bfloat16)
+                next_beam_nsp_losses.scatter_(0, topk_tokens[i].long(), nsp_scores).to(torch.bfloat16)#.float())
                 next_nsp_scores.append(next_beam_nsp_losses.unsqueeze(0))
 
-        next_clf_scores = torch.cat(next_clf_scores, 0)
+        next_clf_scores = torch.cat(next_clf_scores, 0).to(torch.bfloat16)
         if args.nsp:
-            next_nsp_scores = torch.cat(next_nsp_scores)
+            next_nsp_scores = torch.cat(next_nsp_scores).to(torch.bfloat16)
 
         if is_first:
             next_clf_scores += beam_scores[:, None].expand_as(lm_scores)
@@ -272,7 +272,7 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
         beam_idx = output_so_far.new([x[2] for x in next_batch_beam])
 
         # re-order batch
-        output_so_far = output_so_far[beam_idx, :]
+        output_so_far = output_so_far[beam_idx.long(), :]
         output_so_far = torch.cat([output_so_far, beam_tokens.unsqueeze(1)], dim=-1)
 
         # sanity check
@@ -282,25 +282,24 @@ def pairwise_anchor_trigger(query, anchor, raw_passage, model, tokenizer, device
                                     torch.ones_like(pad_output_so_far)], 1)
         # [num_beams, 2]
         final_clf_logits = model(
-            input_ids_pos=concat_query_ids,
-            token_type_ids_pos=token_type_ids,
-            input_ids_neg=concat_query_ids,
-            token_type_ids_neg=token_type_ids
+            input_ids_pos=concat_query_ids.long(),
+            token_type_ids_pos=token_type_ids.long(),
+            input_ids_neg=concat_query_ids.long(),
+            token_type_ids_neg=token_type_ids.long()
         )[0]
         final_clf_scores = final_clf_logits[:, 1]
         sorter = torch.argsort(final_clf_scores, -1, descending=True)
 
         curr_score = final_clf_scores[sorter[0]].item()
-        curr_trigger = tokenizer.decode(output_so_far[sorter[0], start_idx:].cpu().tolist())
+        curr_trigger = tokenizer.decode(output_so_far.long()[sorter[0], start_idx:].cpu().tolist())
         trigger_cands.append((curr_score, curr_trigger))
         if curr_score > best_score:
             best_score = curr_score
             best_trigger = curr_trigger
 
         # re-order internal states
-        past = lm_model._reorder_cache(present, beam_idx)
+        past = lm_model._reorder_cache(present, beam_idx.long())
         # next
         curr_len = curr_len + 1
-
+    
     return best_trigger, best_score, trigger_cands
-

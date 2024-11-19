@@ -1,0 +1,410 @@
+Query id=19335, Doc id=4647397, old score=0.00, new score=0.16, old rank=996, new rank=991
+
+Query id=19335, Doc id=7787893, old score=0.00, new score=0.21, old rank=997, new rank=994
+
+Query id=19335, Doc id=7868947, old score=0.00, new score=0.21, old rank=998, new rank=993
+
+Query id=19335, Doc id=460604, old score=0.00, new score=0.16, old rank=999, new rank=984
+
+Query id=19335, Doc id=8388429, old score=0.00, new score=0.16, old rank=1000, new rank=983
+
+Query id=47923, Doc id=459890, old score=0.00, new score=0.44, old rank=996, new rank=995
+
+Query id=47923, Doc id=4622300, old score=0.00, new score=0.44, old rank=997, new rank=995
+
+Query id=47923, Doc id=8359471, old score=0.00, new score=0.44, old rank=998, new rank=998
+
+Query id=47923, Doc id=8359477, old score=0.00, new score=0.27, old rank=999, new rank=999
+
+Query id=47923, Doc id=4646558, old score=0.00, new score=0.44, old rank=1000, new rank=1000
+
+Query id=87181, Doc id=8291860, old score=0.00, new score=-0.33, old rank=996, new rank=996
+
+Query id=87181, Doc id=8340621, old score=0.00, new score=-0.33, old rank=997, new rank=997
+
+Query id=87181, Doc id=7866412, old score=0.00, new score=-0.33, old rank=998, new rank=998
+
+Query id=87181, Doc id=8357283, old score=0.00, new score=-0.33, old rank=999, new rank=999
+
+Query id=87181, Doc id=8308666, old score=0.00, new score=-0.33, old rank=1000, new rank=1000
+
+Query id=87452, Doc id=8348433, old score=0.00, new score=-1.05, old rank=996, new rank=996
+
+Query id=87452, Doc id=7836838, old score=0.00, new score=-1.05, old rank=997, new rank=993
+
+Query id=87452, Doc id=8257345, old score=0.00, new score=-1.05, old rank=998, new rank=998
+
+Query id=87452, Doc id=8257353, old score=0.00, new score=-1.05, old rank=999, new rank=994
+
+Query id=87452, Doc id=7735040, old score=0.00, new score=-0.96, old rank=1000, new rank=1000
+
+Query id=104861, Doc id=4567532, old score=0.00, new score=-0.88, old rank=996, new rank=992
+
+Query id=104861, Doc id=7766863, old score=0.00, new score=-0.92, old rank=997, new rank=994
+
+Query id=104861, Doc id=7766864, old score=0.00, new score=-0.88, old rank=998, new rank=995
+
+Query id=104861, Doc id=8273718, old score=0.00, new score=-0.89, old rank=999, new rank=994
+
+Query id=104861, Doc id=4690865, old score=0.00, new score=-0.92, old rank=1000, new rank=1000
+
+Query id=130510, Doc id=8367377, old score=0.00, new score=-0.51, old rank=996, new rank=968
+
+Query id=130510, Doc id=783657, old score=0.00, new score=-0.82, old rank=997, new rank=965
+
+Query id=130510, Doc id=783661, old score=0.00, new score=-0.51, old rank=998, new rank=900
+
+Query id=130510, Doc id=783663, old score=0.00, new score=-0.51, old rank=999, new rank=930
+
+Query id=130510, Doc id=8385888, old score=0.00, new score=-0.82, old rank=1000, new rank=985
+
+Query id=131843, Doc id=8309657, old score=0.00, new score=-0.73, old rank=996, new rank=996
+
+Query id=131843, Doc id=83195, old score=0.00, new score=-0.73, old rank=997, new rank=997
+
+Query id=131843, Doc id=7779349, old score=0.00, new score=-0.78, old rank=998, new rank=998
+
+Query id=131843, Doc id=452117, old score=0.00, new score=-0.73, old rank=999, new rank=999
+
+Query id=131843, Doc id=7781503, old score=0.00, new score=-0.86, old rank=1000, new rank=1000
+
+Query id=146187, Doc id=8261924, old score=0.00, new score=-0.26, old rank=996, new rank=961
+
+Query id=146187, Doc id=7840150, old score=0.00, new score=-0.35, old rank=997, new rank=996
+
+Query id=146187, Doc id=7938277, old score=0.00, new score=-0.26, old rank=998, new rank=982
+
+Query id=146187, Doc id=8421480, old score=0.00, new score=-0.40, old rank=999, new rank=992
+
+Query id=146187, Doc id=82089, old score=0.00, new score=-0.29, old rank=1000, new rank=997
+
+Query id=148538, Doc id=8346060, old score=0.00, new score=0.38, old rank=996, new rank=991
+
+Query id=148538, Doc id=4714074, old score=0.00, new score=0.51, old rank=997, new rank=992
+
+Query id=148538, Doc id=8354894, old score=0.00, new score=0.38, old rank=998, new rank=998
+
+Query id=148538, Doc id=4668458, old score=0.00, new score=0.38, old rank=999, new rank=994
+
+Query id=148538, Doc id=451559, old score=0.00, new score=0.51, old rank=1000, new rank=1000
+
+Query id=156493, Doc id=4552081, old score=0.00, new score=-0.65, old rank=996, new rank=996
+
+Query id=156493, Doc id=468074, old score=0.00, new score=-0.65, old rank=997, new rank=997
+
+Query id=156493, Doc id=4649786, old score=0.00, new score=-0.65, old rank=998, new rank=995
+
+Query id=156493, Doc id=8276555, old score=0.00, new score=-0.65, old rank=999, new rank=995
+
+Query id=156493, Doc id=8273018, old score=0.00, new score=-0.65, old rank=1000, new rank=1000
+
+Query id=168216, Doc id=4644283, old score=0.00, new score=-0.54, old rank=996, new rank=995
+
+Query id=168216, Doc id=997006, old score=0.00, new score=-0.54, old rank=997, new rank=996
+
+Query id=168216, Doc id=8357562, old score=0.00, new score=-0.54, old rank=998, new rank=997
+
+Query id=168216, Doc id=8128983, old score=0.00, new score=-0.54, old rank=999, new rank=998
+
+Query id=168216, Doc id=8141124, old score=0.00, new score=-0.55, old rank=1000, new rank=999
+
+Query id=182539, Doc id=4518544, old score=0.00, new score=-0.08, old rank=996, new rank=996
+
+Query id=182539, Doc id=4670401, old score=0.00, new score=-0.06, old rank=997, new rank=999
+
+Query id=182539, Doc id=7812559, old score=0.00, new score=-0.19, old rank=998, new rank=998
+
+Query id=182539, Doc id=8380093, old score=0.00, new score=-0.08, old rank=999, new rank=995
+
+Query id=182539, Doc id=8380094, old score=0.00, new score=-0.08, old rank=1000, new rank=996
+
+Query id=183378, Doc id=7973103, old score=0.00, new score=-1.06, old rank=996, new rank=990
+
+Query id=183378, Doc id=7776558, old score=0.00, new score=-1.06, old rank=997, new rank=1000
+
+Query id=183378, Doc id=7808778, old score=0.00, new score=-1.06, old rank=998, new rank=998
+
+Query id=183378, Doc id=7873256, old score=0.00, new score=-1.06, old rank=999, new rank=991
+
+Query id=183378, Doc id=8299098, old score=0.00, new score=-1.06, old rank=1000, new rank=1000
+
+Query id=207786, Doc id=829736, old score=0.00, new score=0.06, old rank=996, new rank=997
+
+Query id=207786, Doc id=8328778, old score=0.00, new score=0.06, old rank=997, new rank=998
+
+Query id=207786, Doc id=463790, old score=0.00, new score=0.06, old rank=998, new rank=994
+
+Query id=207786, Doc id=463796, old score=0.00, new score=0.06, old rank=999, new rank=995
+
+Query id=207786, Doc id=795753, old score=0.00, new score=0.06, old rank=1000, new rank=1000
+
+Query id=264014, Doc id=8286357, old score=0.00, new score=-0.83, old rank=996, new rank=996
+
+Query id=264014, Doc id=7826609, old score=0.00, new score=-0.82, old rank=997, new rank=997
+
+Query id=264014, Doc id=8329274, old score=0.00, new score=-0.82, old rank=998, new rank=998
+
+Query id=264014, Doc id=8329275, old score=0.00, new score=-0.82, old rank=999, new rank=999
+
+Query id=264014, Doc id=4651490, old score=0.00, new score=-0.82, old rank=1000, new rank=1000
+
+Query id=359349, Doc id=7918604, old score=0.00, new score=-0.55, old rank=996, new rank=996
+
+Query id=359349, Doc id=4688930, old score=0.00, new score=-0.17, old rank=997, new rank=997
+
+Query id=359349, Doc id=7744422, old score=0.00, new score=-0.55, old rank=998, new rank=998
+
+Query id=359349, Doc id=7858787, old score=0.00, new score=-0.55, old rank=999, new rank=999
+
+Query id=359349, Doc id=8302098, old score=0.00, new score=-0.55, old rank=1000, new rank=1000
+
+Query id=405717, Doc id=7977835, old score=0.00, new score=-0.79, old rank=996, new rank=992
+
+Query id=405717, Doc id=7722035, old score=0.00, new score=-0.79, old rank=997, new rank=996
+
+Query id=405717, Doc id=8175979, old score=0.00, new score=-0.79, old rank=998, new rank=994
+
+Query id=405717, Doc id=7997020, old score=0.00, new score=-0.79, old rank=999, new rank=1000
+
+Query id=405717, Doc id=4544714, old score=0.00, new score=-0.79, old rank=1000, new rank=1000
+
+Query id=443396, Doc id=4672880, old score=0.00, new score=-0.06, old rank=996, new rank=996
+
+Query id=443396, Doc id=4696824, old score=0.00, new score=-0.06, old rank=997, new rank=997
+
+Query id=443396, Doc id=4696825, old score=0.00, new score=-0.06, old rank=998, new rank=998
+
+Query id=443396, Doc id=7902502, old score=0.00, new score=-0.06, old rank=999, new rank=999
+
+Query id=443396, Doc id=4632094, old score=0.00, new score=-0.06, old rank=1000, new rank=1000
+
+Query id=451602, Doc id=8336225, old score=0.00, new score=0.15, old rank=996, new rank=994
+
+Query id=451602, Doc id=4687266, old score=0.00, new score=0.15, old rank=997, new rank=995
+
+Query id=451602, Doc id=4687264, old score=0.00, new score=0.15, old rank=998, new rank=996
+
+Query id=451602, Doc id=8383861, old score=0.00, new score=0.15, old rank=999, new rank=1000
+
+Query id=451602, Doc id=8294680, old score=0.00, new score=0.15, old rank=1000, new rank=998
+
+Query id=489204, Doc id=4721138, old score=0.00, new score=-0.82, old rank=996, new rank=997
+
+Query id=489204, Doc id=8209108, old score=0.00, new score=-0.82, old rank=997, new rank=1000
+
+Query id=489204, Doc id=8300944, old score=0.00, new score=-0.82, old rank=998, new rank=999
+
+Query id=489204, Doc id=4512525, old score=0.00, new score=-0.82, old rank=999, new rank=997
+
+Query id=489204, Doc id=7819649, old score=0.00, new score=-0.82, old rank=1000, new rank=1000
+
+Query id=490595, Doc id=4528504, old score=0.00, new score=-0.96, old rank=996, new rank=986
+
+Query id=490595, Doc id=7743572, old score=0.00, new score=-0.96, old rank=997, new rank=986
+
+Query id=490595, Doc id=7982709, old score=0.00, new score=-0.96, old rank=998, new rank=994
+
+Query id=490595, Doc id=777764, old score=0.00, new score=-0.92, old rank=999, new rank=996
+
+Query id=490595, Doc id=8207875, old score=0.00, new score=-0.93, old rank=1000, new rank=1000
+
+Query id=527433, Doc id=4471003, old score=0.00, new score=-0.84, old rank=996, new rank=994
+
+Query id=527433, Doc id=4402996, old score=0.00, new score=-0.84, old rank=997, new rank=997
+
+Query id=527433, Doc id=4556882, old score=0.00, new score=-0.84, old rank=998, new rank=998
+
+Query id=527433, Doc id=437955, old score=0.00, new score=-1.00, old rank=999, new rank=999
+
+Query id=527433, Doc id=8374169, old score=0.00, new score=-0.84, old rank=1000, new rank=1000
+
+Query id=573724, Doc id=4597895, old score=0.00, new score=0.49, old rank=996, new rank=996
+
+Query id=573724, Doc id=832304, old score=0.00, new score=0.49, old rank=997, new rank=997
+
+Query id=573724, Doc id=7825012, old score=0.00, new score=0.49, old rank=998, new rank=998
+
+Query id=573724, Doc id=7832601, old score=0.00, new score=0.49, old rank=999, new rank=999
+
+Query id=573724, Doc id=456898, old score=0.00, new score=0.49, old rank=1000, new rank=1000
+
+Query id=833860, Doc id=7858169, old score=0.00, new score=-0.94, old rank=996, new rank=997
+
+Query id=833860, Doc id=7904418, old score=0.00, new score=-0.94, old rank=997, new rank=995
+
+Query id=833860, Doc id=7777295, old score=0.00, new score=-0.94, old rank=998, new rank=999
+
+Query id=833860, Doc id=8354522, old score=0.00, new score=-0.94, old rank=999, new rank=992
+
+Query id=833860, Doc id=7760446, old score=0.00, new score=-0.94, old rank=1000, new rank=993
+
+Query id=915593, Doc id=8289548, old score=0.00, new score=-1.15, old rank=996, new rank=991
+
+Query id=915593, Doc id=7977759, old score=0.00, new score=-1.15, old rank=997, new rank=993
+
+Query id=915593, Doc id=4566824, old score=0.00, new score=-1.07, old rank=998, new rank=999
+
+Query id=915593, Doc id=7995254, old score=0.00, new score=-1.15, old rank=999, new rank=1000
+
+Query id=915593, Doc id=837214, old score=0.00, new score=-1.15, old rank=1000, new rank=992
+
+Query id=962179, Doc id=8241436, old score=0.00, new score=-0.95, old rank=996, new rank=981
+
+Query id=962179, Doc id=4549207, old score=0.00, new score=-0.89, old rank=997, new rank=986
+
+Query id=962179, Doc id=8310476, old score=0.00, new score=-0.95, old rank=998, new rank=999
+
+Query id=962179, Doc id=7749617, old score=0.00, new score=-0.89, old rank=999, new rank=987
+
+Query id=962179, Doc id=7977614, old score=0.00, new score=-0.89, old rank=1000, new rank=988
+
+Query id=1037798, Doc id=7943228, old score=0.00, new score=-0.70, old rank=996, new rank=996
+
+Query id=1037798, Doc id=4600225, old score=0.00, new score=-0.70, old rank=997, new rank=997
+
+Query id=1037798, Doc id=7979062, old score=0.00, new score=-0.70, old rank=998, new rank=998
+
+Query id=1037798, Doc id=789998, old score=0.00, new score=-0.70, old rank=999, new rank=999
+
+Query id=1037798, Doc id=4661351, old score=0.00, new score=-0.70, old rank=1000, new rank=1000
+
+Query id=1063750, Doc id=8151261, old score=0.00, new score=-0.69, old rank=996, new rank=996
+
+Query id=1063750, Doc id=8365599, old score=0.00, new score=-0.69, old rank=997, new rank=997
+
+Query id=1063750, Doc id=4539599, old score=0.00, new score=-0.69, old rank=998, new rank=998
+
+Query id=1063750, Doc id=8263940, old score=0.00, new score=-0.69, old rank=999, new rank=999
+
+Query id=1063750, Doc id=445272, old score=0.00, new score=-0.69, old rank=1000, new rank=1000
+
+Query id=1103812, Doc id=7862770, old score=0.00, new score=-0.61, old rank=996, new rank=958
+
+Query id=1103812, Doc id=7843651, old score=0.00, new score=-0.61, old rank=997, new rank=956
+
+Query id=1103812, Doc id=4640323, old score=0.00, new score=-0.61, old rank=998, new rank=984
+
+Query id=1103812, Doc id=4694457, old score=0.00, new score=-0.61, old rank=999, new rank=995
+
+Query id=1103812, Doc id=4609956, old score=0.00, new score=-0.61, old rank=1000, new rank=985
+
+Query id=1106007, Doc id=8304077, old score=0.00, new score=0.68, old rank=996, new rank=985
+
+Query id=1106007, Doc id=4672712, old score=0.00, new score=0.19, old rank=997, new rank=991
+
+Query id=1106007, Doc id=8275452, old score=0.00, new score=0.61, old rank=998, new rank=998
+
+Query id=1106007, Doc id=7984053, old score=0.00, new score=0.19, old rank=999, new rank=999
+
+Query id=1106007, Doc id=8277923, old score=0.00, new score=-0.44, old rank=1000, new rank=1000
+
+Query id=1110199, Doc id=4655421, old score=0.00, new score=0.09, old rank=996, new rank=996
+
+Query id=1110199, Doc id=4655422, old score=0.00, new score=0.09, old rank=997, new rank=997
+
+Query id=1110199, Doc id=4579297, old score=0.00, new score=0.05, old rank=998, new rank=998
+
+Query id=1110199, Doc id=7840259, old score=0.00, new score=-0.01, old rank=999, new rank=999
+
+Query id=1110199, Doc id=7960023, old score=0.00, new score=0.09, old rank=1000, new rank=1000
+
+Query id=1112341, Doc id=8200421, old score=0.00, new score=-0.95, old rank=996, new rank=997
+
+Query id=1112341, Doc id=7818788, old score=0.00, new score=-0.95, old rank=997, new rank=998
+
+Query id=1112341, Doc id=7760189, old score=0.00, new score=-0.94, old rank=998, new rank=999
+
+Query id=1112341, Doc id=8372728, old score=0.00, new score=-0.95, old rank=999, new rank=992
+
+Query id=1112341, Doc id=4551975, old score=0.00, new score=-0.95, old rank=1000, new rank=992
+
+Query id=1113437, Doc id=8386762, old score=0.00, new score=-0.52, old rank=996, new rank=996
+
+Query id=1113437, Doc id=8393639, old score=0.00, new score=-0.52, old rank=997, new rank=997
+
+Query id=1113437, Doc id=826113, old score=0.00, new score=-0.48, old rank=998, new rank=998
+
+Query id=1113437, Doc id=4570040, old score=0.00, new score=-0.52, old rank=999, new rank=999
+
+Query id=1113437, Doc id=8299324, old score=0.00, new score=-0.52, old rank=1000, new rank=1000
+
+Query id=1114646, Doc id=7772460, old score=0.00, new score=-0.25, old rank=996, new rank=984
+
+Query id=1114646, Doc id=468342, old score=0.00, new score=-0.25, old rank=997, new rank=997
+
+Query id=1114646, Doc id=454301, old score=0.00, new score=-0.25, old rank=998, new rank=998
+
+Query id=1114646, Doc id=4508078, old score=0.00, new score=-0.25, old rank=999, new rank=999
+
+Query id=1114646, Doc id=7702598, old score=0.00, new score=-0.25, old rank=1000, new rank=1000
+
+Query id=1114819, Doc id=8128992, old score=0.00, new score=-1.19, old rank=996, new rank=963
+
+Query id=1114819, Doc id=468342, old score=0.00, new score=-1.19, old rank=997, new rank=998
+
+Query id=1114819, Doc id=8115441, old score=0.00, new score=-0.92, old rank=998, new rank=983
+
+Query id=1114819, Doc id=8332538, old score=0.00, new score=-1.19, old rank=999, new rank=999
+
+Query id=1114819, Doc id=8112154, old score=0.00, new score=-0.92, old rank=1000, new rank=1000
+
+Query id=1115776, Doc id=4673200, old score=0.00, new score=-0.71, old rank=996, new rank=995
+
+Query id=1115776, Doc id=7940656, old score=0.00, new score=-0.71, old rank=997, new rank=996
+
+Query id=1115776, Doc id=4591599, old score=0.00, new score=-0.71, old rank=998, new rank=998
+
+Query id=1115776, Doc id=8303431, old score=0.00, new score=-0.71, old rank=999, new rank=999
+
+Query id=1115776, Doc id=4647269, old score=0.00, new score=-0.71, old rank=1000, new rank=1000
+
+Query id=1117099, Doc id=7960261, old score=0.00, new score=-0.83, old rank=996, new rank=996
+
+Query id=1117099, Doc id=7960257, old score=0.00, new score=-0.74, old rank=997, new rank=997
+
+Query id=1117099, Doc id=7672781, old score=0.00, new score=-0.74, old rank=998, new rank=998
+
+Query id=1117099, Doc id=4528334, old score=0.00, new score=-0.83, old rank=999, new rank=999
+
+Query id=1117099, Doc id=7664693, old score=0.00, new score=-0.83, old rank=1000, new rank=1000
+
+Query id=1121402, Doc id=8155450, old score=0.00, new score=-0.73, old rank=996, new rank=986
+
+Query id=1121402, Doc id=8349460, old score=0.00, new score=-0.73, old rank=997, new rank=1000
+
+Query id=1121402, Doc id=8135452, old score=0.00, new score=-0.73, old rank=998, new rank=983
+
+Query id=1121402, Doc id=942111, old score=0.00, new score=-0.73, old rank=999, new rank=999
+
+Query id=1121402, Doc id=7621342, old score=0.00, new score=-0.73, old rank=1000, new rank=1000
+
+Query id=1124210, Doc id=4529346, old score=0.00, new score=-0.32, old rank=996, new rank=981
+
+Query id=1124210, Doc id=4569961, old score=0.00, new score=-0.47, old rank=997, new rank=980
+
+Query id=1124210, Doc id=8416219, old score=0.00, new score=-0.42, old rank=998, new rank=996
+
+Query id=1124210, Doc id=8272825, old score=0.00, new score=-0.32, old rank=999, new rank=995
+
+Query id=1124210, Doc id=7769920, old score=0.00, new score=-0.47, old rank=1000, new rank=981
+
+Query id=1129237, Doc id=7901542, old score=0.00, new score=-0.96, old rank=996, new rank=996
+
+Query id=1129237, Doc id=7901543, old score=0.00, new score=-0.96, old rank=997, new rank=997
+
+Query id=1129237, Doc id=8180277, old score=0.00, new score=-0.96, old rank=998, new rank=998
+
+Query id=1129237, Doc id=8215948, old score=0.00, new score=-0.96, old rank=999, new rank=999
+
+Query id=1129237, Doc id=4661477, old score=0.00, new score=-0.96, old rank=1000, new rank=1000
+
+Query id=1133167, Doc id=8411148, old score=0.00, new score=-1.02, old rank=996, new rank=983
+
+Query id=1133167, Doc id=7835488, old score=0.00, new score=-1.02, old rank=997, new rank=997
+
+Query id=1133167, Doc id=4620154, old score=0.00, new score=-1.02, old rank=998, new rank=998
+
+Query id=1133167, Doc id=7831347, old score=0.00, new score=-1.02, old rank=999, new rank=999
+
+Query id=1133167, Doc id=4567537, old score=0.00, new score=-1.02, old rank=1000, new rank=1000
+
