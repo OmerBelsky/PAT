@@ -23,13 +23,14 @@ import pickle
 from transformers import BertTokenizerFast, BertForNextSentencePrediction, \
     AutoModelForSequenceClassification
 from transformers import AutoTokenizer
-from bert_ranker.models import pairwise_bert
+from bert_ranker.models import pairwise_bert, pointwise_rg
 from bert_ranker.models.bert_lm import BertForLM
 from apex import amp
 from attack_methods import pairwise_anchor_trigger
 from data_utils import prepare_data_and_scores, pick_target_query_doc_and_best_scores
 from rank_llm.data import Query, Candidate, Request
 from rank_llm.rerank.listwise import vicuna_reranker, zephyr_reranker
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 device = 'cuda' if cuda.is_available() else 'cpu'
 
@@ -100,6 +101,10 @@ def train_trigger(args, tokenizer):
         _, _, _, all_qid_pid_dict = pick_target_query_doc_and_best_scores(args.target, args.data_name, 5, 5)
         model_path = prodir + '/bert_ranker/saved_models/Imitation.rank_zephyr.further.BertForPairwiseLearning.top_25_last_4.bert-base-uncased.pth'
         r_llm = zephyr_reranker.ZephyrReranker()
+    elif args.imitation_model == 'rg':
+        _, _, _, all_qid_pid_dict = pick_target_query_doc_and_best_scores(args.target, args.data_name, 5, 5)
+        model_path = prodir + '/bert_ranker/saved_models/Imitation.rg.further.BertForPairwiseLearning.top_25_last_4.bert-base-uncased.pth'
+        r_llm = pointwise_rg.RGRanker(T5Tokenizer.from_pretrained("google/flan-t5-xxl"), T5ForConditionalGeneration.from_pretrained("google/flan-t5-xxl", torch_dtype=torch.bfloat16).to(device))
     else:
         model_path = None
     print("Load model from: {}".format(model_path))
@@ -191,7 +196,7 @@ def train_trigger(args, tokenizer):
         if int(qid) not in qid_did_tracker:
             qid_did_tracker[int(qid)] = []
 
-        if args.attack_setting_prada and (args.imitation_model in ['rank_vicuna', 'rank_zephyr']):
+        if args.attack_setting_prada and (args.imitation_model in ['rank_vicuna', 'rank_zephyr', 'rg']):
             attacked_docs = dict()
             old_ranks = dict()
             for did in target_q_passage[qid]:
@@ -219,11 +224,16 @@ def train_trigger(args, tokenizer):
                 old_rank, old_score = target_q_passage[qid][did]
                 old_ranks[did] = old_rank
                 attacked_docs[did] = trigger + ' ' + passages_dict[did]
-            q = Query(query, qid)
-            candidates = [Candidate(docid, 0, {'contents': attacked_docs[docid]} if docid in attacked_docs.keys() else {'contents': passages_dict[docid]}) for docid in all_qid_pid_dict[qid]]
-            request = Request(query=q, candidates=candidates)
-            reranked = r_llm.rerank(request=request, rank_end=100)
-            new_ranks = {did:[candidate.docid for candidate in reranked[0].candidates].index(did) + 1 for did in attacked_docs.keys()}
+            if args.imitation_model in ['rank_vicuna', 'rank_zephyr']:
+                q = Query(query, qid)
+                candidates = [Candidate(docid, 0, {'contents': attacked_docs[docid]} if docid in attacked_docs.keys() else {'contents': passages_dict[docid]}) for docid in all_qid_pid_dict[qid]]
+                request = Request(query=q, candidates=candidates)
+                reranked = r_llm.rerank(request=request, rank_end=100)
+                new_ranks = {did:[candidate.docid for candidate in reranked[0].candidates].index(did) + 1 for did in attacked_docs.keys()}
+            elif args.imitation_model == 'rg':
+                hits = [(did, attacked_docs[did] if did in attacked_docs.keys() else passages_dict[did], 0) for did in all_qid_pid_dict[qid]]
+                reranked = r_llm.rerank(hits, query)
+                new_ranks = {did:[candidate[0] for candidate in reranked].index(did) + 1 for did in attacked_docs.keys()}
             torch.cuda.empty_cache()
             total_docs_cnt += len(attacked_docs)
             boost_rank_list += [old_ranks[did] - new_ranks[did] for did in attacked_docs]

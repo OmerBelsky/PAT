@@ -22,6 +22,7 @@ runs_bert_large = runs_data_folder + '/runs.bert-large-uncased.public.bert.msmar
 runs_MiniLM_L_12 = runs_data_folder + '/runs.ms-marco-MiniLM-L-12-v2.public.bert.msmarco.eval_full_dev1000.csv'
 runs_rank_vicuna = runs_data_folder + '/runs.bert-large-uncased.public.bert.msmarco.Mon_Oct_28.rank_vicuna_eval_full_dev1000.csv'
 runs_rank_zephyr = runs_data_folder + '/runs.bert-large-uncased.public.bert.msmarco.Wed_Oct_30.rank_zephyr_eval_full_dev1000.csv'
+runs_rg = runs_data_folder + '/runs.bert-large-uncased.public.bert.msmarco.Tue_Nov_26.rg_eval_full_dev1000.csv'
 
 random_seed = 666
 
@@ -82,9 +83,10 @@ if __name__ == "__main__":
     # save_triples_prefix = sampled_triples_path + '/minilm_l12_sampled_triples'
     # save_triples_prefix = sampled_triples_path + '/bert_large_sampled_triples'
     # save_triples_prefix = sampled_triples_path + '/rank_vicuna_sampled_triples'
-    save_triples_prefix = sampled_triples_path + '/rank_zephyr_sampled_triples'
+    # save_triples_prefix = sampled_triples_path + '/rank_zephyr_sampled_triples'
+    save_triples_prefix = sampled_triples_path + '/rg_sampled_triples'
     # sample_from_dev_runs(runs_bert_large, save_triples_prefix)
-    sample_from_dev_runs(runs_rank_zephyr, save_triples_prefix)
+    sample_from_dev_runs(runs_rg, save_triples_prefix)
 
 
 

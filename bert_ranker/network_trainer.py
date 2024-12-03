@@ -72,7 +72,7 @@ class Trainer(object):
 
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.lr)
 
-        self.model, self.optimizer = amp.initialize(self.model, self.optimizer, opt_level='O1')
+        # self.model, self.optimizer = amp.initialize(self.model, self.optimizer, opt_level='O1')
 
         if self.num_gpu > 1:
             devices = [v for v in range(self.num_gpu)]
@@ -98,7 +98,7 @@ class Trainer(object):
             raise ValueError("{} model class is not exist!".format(self.model_name))
 
         model.to(self.device)
-        model = amp.initialize(model, opt_level='O1')
+        # model = amp.initialize(model, opt_level='O1')
         if self.num_gpu > 1:
             devices = [v for v in range(self.num_gpu)]
             model = nn.DataParallel(model, device_ids=devices)
@@ -150,8 +150,9 @@ class Trainer(object):
                 if self.num_gpu > 1:
                     loss = loss.mean()
 
-                with amp.scale_loss(loss, self.optimizer) as scaled_loss:
-                    scaled_loss.backward()
+                # with amp.scale_loss(loss, self.optimizer) as scaled_loss:
+                #     scaled_loss.backward()
+                loss.backward()
 
                 self.writer_train.add_scalar('loss', loss, global_step)
 

@@ -27,6 +27,15 @@ class Imitation_Dataset(object):
 
         self.triples_from_runs_bert_large = self.triples_from_runs_folder + '/bert_large_sampled_triples_text.{}.csv'.format(
             self.sample_config_tail)
+        
+        self.triples_from_runs_rank_zephyr = self.triples_from_runs_folder + '/rank_zephyr_sampled_triples_text.{}.csv'.format(
+            self.sample_config_tail)
+        
+        self.triples_from_runs_rank_vicuna = self.triples_from_runs_folder + '/rank_vicuna_sampled_triples_text.{}.csv'.format(
+            self.sample_config_tail)
+        
+        self.triples_from_runs_rg = self.triples_from_runs_folder + '/rg_sampled_triples_text.{}.csv'.format(
+            self.sample_config_tail)
 
         self.triples_from_runs_minilm_l12_v2 = self.triples_from_runs_folder + '/minilm_l12_sampled_triples_text.{}.csv'.format(
             self.sample_config_tail)
@@ -50,11 +59,15 @@ class Imitation_Dataset(object):
         elif self.victim == 'rank_vicuna':
             pkl_path = self.ms_folder_name + '/triples_from_runs/rank_vicuna_sampled_triples_text.{}.pkl'.format(
                 self.sample_config_tail)
-            triples_from_runs = self.triples_from_runs_bert_large
+            triples_from_runs = self.triples_from_runs_rank_vicuna
         elif self.victim == 'rank_zephyr':
             pkl_path = self.ms_folder_name + '/triples_from_runs/rank_zephyr_sampled_triples_text.{}.pkl'.format(
                 self.sample_config_tail)
-            triples_from_runs = self.triples_from_runs_bert_large
+            triples_from_runs = self.triples_from_runs_rank_zephyr
+        elif self.victim == 'rg':
+            pkl_path = self.ms_folder_name + '/triples_from_runs/rg_sampled_triples_text.{}.pkl'.format(
+                self.sample_config_tail)
+            triples_from_runs = self.triples_from_runs_rg
         else:
             raise ValueError("Wrong victim model")
         print("Load data from {}".format(pkl_path))

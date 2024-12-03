@@ -90,7 +90,7 @@ def main():
         model_path = curdir + '/saved_models/' + model.__class__.__name__ + '.' + args.transformer_model + '.pth'
 
     model.to(device)
-    model = amp.initialize(model, opt_level='O1')
+    # model = amp.initialize(model, opt_level='O1')
     num_gpu = torch.cuda.device_count()
     if num_gpu > 1:
         devices = [v for v in range(num_gpu)]

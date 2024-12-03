@@ -18,7 +18,9 @@ import torch.nn as nn
 import argparse
 from apex import amp
 from models.bert_cat import BERT_Cat
-
+from models.pointwise_rg import RGRanker
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+from tqdm import tqdm
 
 def main():
     parser = argparse.ArgumentParser('Pytorch')
@@ -146,7 +148,57 @@ def main():
         df_save_path = output_dir + "/run." + args.run_id + '.' + args.mode + ".csv"
         top_100[['qid', 'pid', 'rank']].sort_values(['qid', 'rank']).to_csv(df_save_path, sep='\t', index=False, header=False)
         return
+    elif args.mode.startswith('rg_'):
+        del model
+        collection_df = pd.read_csv(prodir + '/data/msmarco_passage/collection.tsv', sep='\t', header=None,
+                                    names=['pid', 'passage'])
+        collection_df.set_index('pid', inplace=True)
+        if args.mode.endswith('dl2019'):
+            queries_df = pd.read_csv(prodir + '/data/trec_dl_2019/queries.eval.tsv', sep='\t', header=None, names=['qid', 'query'])
+            queries_df.set_index('qid', inplace=True)
+        if args.mode.endswith('eval_full_dev1000'):
+            queries_df = pd.read_csv(prodir + '/data/trec_dl_2019/queries.dev.tsv', sep='\t', header=None, names=['qid', 'query'])
+            queries_df.set_index('qid', inplace=True)
+        llm_mode = 'rg_'
+        mode = args.mode.split(llm_mode)[1]
+        qids = []
+        pids = []
+        for _, _, tmp_qids, tmp_pids in data_obj.data_generator_mono_dev(mode=mode,
+                                                                                               batch_size=args.val_batch_size,
+                                                                                               max_seq_len=args.max_seq_len):
+            qids += tmp_qids
+            pids += tmp_pids
+        del data_obj
+        del tokenizer
+        torch.cuda.empty_cache()
+        tokenizer = T5Tokenizer.from_pretrained("google/flan-t5-xxl")
+        model = T5ForConditionalGeneration.from_pretrained("google/flan-t5-xxl", torch_dtype=torch.bfloat16).to(device)
+        rr_llm = RGRanker(tokenizer, model)
+        pairs_df = pd.DataFrame({'qid': qids, 'pid': pids})
+        final_df = []
+        for qid in tqdm(pairs_df['qid'].unique()):
+            query = queries_df.loc[qid, 'query']
+            # get all pid, passage pairs for this query
+            hits = []
+            for _, row in pairs_df[pairs_df['qid'] == qid].iterrows():
+                pid = row['pid']
+                passage = collection_df.loc[pid, 'passage']
+                hits.append((pid, passage, 0.0))
+            result = rr_llm.rerank(hits, query)
+            for i, (docid, _, score) in enumerate(result):
+                final_df.append((qid, docid, i + 1, score))
+        final_df = pd.DataFrame(final_df, columns=['qid', 'pid', 'rank', 'score'])
+        pairs_df = pairs_df.merge(final_df, on=['qid', 'pid'])
+        pairs_df['Q0'] = 'Q0'
+        pairs_df['runid'] = 'Relevance_Generation'
+        df_save_path = output_dir + '/runs/runs.' + args.run_id + '.' + args.mode + '.csv'
+        pairs_df[['qid', 'Q0', 'pid', 'rank', 'score', 'runid']].sort_values(['qid', 'rank']).to_csv(df_save_path, sep='\t', index=False, header=False)
 
+        # take only the top 100 per qid and save to seperate file
+        top_100 = pairs_df[pairs_df['rank'] <= 100]
+        df_save_path = output_dir + "/run." + args.run_id + '.' + args.mode + ".csv"
+        top_100[['qid', 'pid', 'rank']].sort_values(['qid', 'rank']).to_csv(df_save_path, sep='\t', index=False, header=False)
+        return
 
 
 

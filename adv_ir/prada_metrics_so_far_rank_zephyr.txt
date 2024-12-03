@@ -6,9 +6,9 @@ Query id=19335, Doc id=8224504, old score=0, new score=0, old rank=35, new rank=
 
 Query id=19335, Doc id=866141, old score=0, new score=0, old rank=44, new rank=59
 
-Query id=19335, Doc id=8706880, old score=0, new score=0, old rank=54, new rank=69
+Query id=19335, Doc id=8706880, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=19335, Doc id=1433053, old score=0, new score=0, old rank=63, new rank=76
+Query id=19335, Doc id=1433053, old score=0, new score=0, old rank=63, new rank=63
 
 Query id=19335, Doc id=636713, old score=0, new score=0, old rank=72, new rank=82
 
@@ -16,11 +16,11 @@ Query id=19335, Doc id=1566385, old score=0, new score=0, old rank=89, new rank=
 
 Query id=19335, Doc id=6562105, old score=0, new score=0, old rank=92, new rank=62
 
-Query id=47923, Doc id=8441078, old score=0, new score=0, old rank=12, new rank=21
+Query id=47923, Doc id=8441078, old score=0, new score=0, old rank=12, new rank=25
 
 Query id=47923, Doc id=8110289, old score=0, new score=0, old rank=21, new rank=20
 
-Query id=47923, Doc id=8619126, old score=0, new score=0, old rank=35, new rank=45
+Query id=47923, Doc id=8619126, old score=0, new score=0, old rank=35, new rank=44
 
 Query id=47923, Doc id=8214977, old score=0, new score=0, old rank=44, new rank=53
 
@@ -34,17 +34,17 @@ Query id=47923, Doc id=6607412, old score=0, new score=0, old rank=89, new rank=
 
 Query id=47923, Doc id=6652175, old score=0, new score=0, old rank=92, new rank=81
 
-Query id=87181, Doc id=5197135, old score=0, new score=0, old rank=12, new rank=24
+Query id=87181, Doc id=5197135, old score=0, new score=0, old rank=12, new rank=21
 
 Query id=87181, Doc id=8332555, old score=0, new score=0, old rank=21, new rank=11
 
-Query id=87181, Doc id=8565, old score=0, new score=0, old rank=35, new rank=49
+Query id=87181, Doc id=8565, old score=0, new score=0, old rank=35, new rank=48
 
-Query id=87181, Doc id=8617376, old score=0, new score=0, old rank=44, new rank=54
+Query id=87181, Doc id=8617376, old score=0, new score=0, old rank=44, new rank=57
 
-Query id=87181, Doc id=8217811, old score=0, new score=0, old rank=54, new rank=61
+Query id=87181, Doc id=8217811, old score=0, new score=0, old rank=54, new rank=70
 
-Query id=87181, Doc id=8738507, old score=0, new score=0, old rank=63, new rank=53
+Query id=87181, Doc id=8738507, old score=0, new score=0, old rank=63, new rank=51
 
 Query id=87181, Doc id=1411471, old score=0, new score=0, old rank=72, new rank=72
 
@@ -52,23 +52,23 @@ Query id=87181, Doc id=1462772, old score=0, new score=0, old rank=89, new rank=
 
 Query id=87181, Doc id=6472589, old score=0, new score=0, old rank=92, new rank=90
 
-Query id=87452, Doc id=7166747, old score=0, new score=0, old rank=12, new rank=23
+Query id=87452, Doc id=7166747, old score=0, new score=0, old rank=12, new rank=24
 
 Query id=87452, Doc id=8081937, old score=0, new score=0, old rank=21, new rank=31
 
 Query id=87452, Doc id=5268233, old score=0, new score=0, old rank=35, new rank=47
 
-Query id=87452, Doc id=5348449, old score=0, new score=0, old rank=44, new rank=52
+Query id=87452, Doc id=5348449, old score=0, new score=0, old rank=44, new rank=54
 
 Query id=87452, Doc id=8363115, old score=0, new score=0, old rank=54, new rank=63
 
 Query id=87452, Doc id=8363122, old score=0, new score=0, old rank=63, new rank=77
 
-Query id=87452, Doc id=8436579, old score=0, new score=0, old rank=72, new rank=17
+Query id=87452, Doc id=8436579, old score=0, new score=0, old rank=72, new rank=15
 
-Query id=87452, Doc id=1558541, old score=0, new score=0, old rank=89, new rank=97
+Query id=87452, Doc id=1558541, old score=0, new score=0, old rank=89, new rank=96
 
-Query id=87452, Doc id=6206333, old score=0, new score=0, old rank=92, new rank=74
+Query id=87452, Doc id=6206333, old score=0, new score=0, old rank=92, new rank=81
 
 Query id=104861, Doc id=8516154, old score=0, new score=0, old rank=12, new rank=21
 
@@ -80,15 +80,15 @@ Query id=104861, Doc id=8663862, old score=0, new score=0, old rank=44, new rank
 
 Query id=104861, Doc id=879122, old score=0, new score=0, old rank=54, new rank=66
 
-Query id=104861, Doc id=8357894, old score=0, new score=0, old rank=63, new rank=63
+Query id=104861, Doc id=8357894, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=104861, Doc id=1551599, old score=0, new score=0, old rank=72, new rank=85
+Query id=104861, Doc id=1551599, old score=0, new score=0, old rank=72, new rank=61
 
 Query id=104861, Doc id=6167530, old score=0, new score=0, old rank=89, new rank=94
 
-Query id=104861, Doc id=6634454, old score=0, new score=0, old rank=92, new rank=86
+Query id=104861, Doc id=6634454, old score=0, new score=0, old rank=92, new rank=89
 
-Query id=130510, Doc id=723495, old score=0, new score=0, old rank=12, new rank=28
+Query id=130510, Doc id=723495, old score=0, new score=0, old rank=12, new rank=21
 
 Query id=130510, Doc id=8612904, old score=0, new score=0, old rank=21, new rank=13
 
@@ -106,41 +106,41 @@ Query id=130510, Doc id=1598194, old score=0, new score=0, old rank=89, new rank
 
 Query id=130510, Doc id=6685197, old score=0, new score=0, old rank=92, new rank=72
 
-Query id=131843, Doc id=7130104, old score=0, new score=0, old rank=12, new rank=27
+Query id=131843, Doc id=7130104, old score=0, new score=0, old rank=12, new rank=26
 
-Query id=131843, Doc id=5237561, old score=0, new score=0, old rank=21, new rank=40
+Query id=131843, Doc id=5237561, old score=0, new score=0, old rank=21, new rank=30
 
-Query id=131843, Doc id=8213010, old score=0, new score=0, old rank=35, new rank=50
+Query id=131843, Doc id=8213010, old score=0, new score=0, old rank=35, new rank=47
 
-Query id=131843, Doc id=7459313, old score=0, new score=0, old rank=44, new rank=54
+Query id=131843, Doc id=7459313, old score=0, new score=0, old rank=44, new rank=53
 
 Query id=131843, Doc id=747832, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=131843, Doc id=8392522, old score=0, new score=0, old rank=63, new rank=75
+Query id=131843, Doc id=8392522, old score=0, new score=0, old rank=63, new rank=62
 
-Query id=131843, Doc id=1512676, old score=0, new score=0, old rank=72, new rank=76
+Query id=131843, Doc id=1512676, old score=0, new score=0, old rank=72, new rank=66
 
 Query id=131843, Doc id=6502706, old score=0, new score=0, old rank=89, new rank=89
 
 Query id=131843, Doc id=6187402, old score=0, new score=0, old rank=92, new rank=92
 
-Query id=146187, Doc id=8042969, old score=0, new score=0, old rank=12, new rank=18
+Query id=146187, Doc id=8042969, old score=0, new score=0, old rank=12, new rank=23
 
 Query id=146187, Doc id=8481818, old score=0, new score=0, old rank=21, new rank=32
 
-Query id=146187, Doc id=743883, old score=0, new score=0, old rank=35, new rank=45
+Query id=146187, Doc id=743883, old score=0, new score=0, old rank=35, new rank=47
 
 Query id=146187, Doc id=5497688, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=146187, Doc id=8361901, old score=0, new score=0, old rank=54, new rank=17
+Query id=146187, Doc id=8361901, old score=0, new score=0, old rank=54, new rank=53
 
-Query id=146187, Doc id=6021105, old score=0, new score=0, old rank=63, new rank=77
+Query id=146187, Doc id=6021105, old score=0, new score=0, old rank=63, new rank=80
 
-Query id=146187, Doc id=6430259, old score=0, new score=0, old rank=72, new rank=20
+Query id=146187, Doc id=6430259, old score=0, new score=0, old rank=72, new rank=15
 
-Query id=146187, Doc id=1712717, old score=0, new score=0, old rank=89, new rank=99
+Query id=146187, Doc id=1712717, old score=0, new score=0, old rank=89, new rank=97
 
-Query id=146187, Doc id=2226090, old score=0, new score=0, old rank=92, new rank=41
+Query id=146187, Doc id=2226090, old score=0, new score=0, old rank=92, new rank=71
 
 Query id=148538, Doc id=5198182, old score=0, new score=0, old rank=12, new rank=22
 
@@ -148,15 +148,15 @@ Query id=148538, Doc id=8139872, old score=0, new score=0, old rank=21, new rank
 
 Query id=148538, Doc id=7427436, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=148538, Doc id=8690528, old score=0, new score=0, old rank=44, new rank=54
+Query id=148538, Doc id=8690528, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=148538, Doc id=748726, old score=0, new score=0, old rank=54, new rank=64
+Query id=148538, Doc id=748726, old score=0, new score=0, old rank=54, new rank=67
 
 Query id=148538, Doc id=7543015, old score=0, new score=0, old rank=63, new rank=80
 
 Query id=148538, Doc id=6006382, old score=0, new score=0, old rank=72, new rank=82
 
-Query id=148538, Doc id=985493, old score=0, new score=0, old rank=89, new rank=98
+Query id=148538, Doc id=985493, old score=0, new score=0, old rank=89, new rank=97
 
 Query id=148538, Doc id=6158225, old score=0, new score=0, old rank=92, new rank=21
 
@@ -170,7 +170,7 @@ Query id=156493, Doc id=7532197, old score=0, new score=0, old rank=44, new rank
 
 Query id=156493, Doc id=8820525, old score=0, new score=0, old rank=54, new rank=62
 
-Query id=156493, Doc id=911795, old score=0, new score=0, old rank=63, new rank=42
+Query id=156493, Doc id=911795, old score=0, new score=0, old rank=63, new rank=51
 
 Query id=156493, Doc id=994486, old score=0, new score=0, old rank=72, new rank=14
 
@@ -178,53 +178,53 @@ Query id=156493, Doc id=3053015, old score=0, new score=0, old rank=89, new rank
 
 Query id=156493, Doc id=3180508, old score=0, new score=0, old rank=92, new rank=74
 
-Query id=168216, Doc id=8048969, old score=0, new score=0, old rank=12, new rank=22
+Query id=168216, Doc id=8048969, old score=0, new score=0, old rank=12, new rank=23
 
 Query id=168216, Doc id=8141128, old score=0, new score=0, old rank=21, new rank=31
 
 Query id=168216, Doc id=5293612, old score=0, new score=0, old rank=35, new rank=44
 
-Query id=168216, Doc id=8252758, old score=0, new score=0, old rank=44, new rank=52
+Query id=168216, Doc id=8252758, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=168216, Doc id=826043, old score=0, new score=0, old rank=54, new rank=64
+Query id=168216, Doc id=826043, old score=0, new score=0, old rank=54, new rank=67
 
-Query id=168216, Doc id=8811121, old score=0, new score=0, old rank=63, new rank=74
+Query id=168216, Doc id=8811121, old score=0, new score=0, old rank=63, new rank=71
 
-Query id=168216, Doc id=6012600, old score=0, new score=0, old rank=72, new rank=13
+Query id=168216, Doc id=6012600, old score=0, new score=0, old rank=72, new rank=17
 
-Query id=168216, Doc id=6439448, old score=0, new score=0, old rank=89, new rank=92
+Query id=168216, Doc id=6439448, old score=0, new score=0, old rank=89, new rank=93
 
-Query id=168216, Doc id=6199601, old score=0, new score=0, old rank=92, new rank=62
+Query id=168216, Doc id=6199601, old score=0, new score=0, old rank=92, new rank=94
 
-Query id=182539, Doc id=804717, old score=0, new score=0, old rank=12, new rank=14
+Query id=182539, Doc id=804717, old score=0, new score=0, old rank=12, new rank=22
 
-Query id=182539, Doc id=5238129, old score=0, new score=0, old rank=21, new rank=21
+Query id=182539, Doc id=5238129, old score=0, new score=0, old rank=21, new rank=14
 
-Query id=182539, Doc id=8272764, old score=0, new score=0, old rank=35, new rank=45
+Query id=182539, Doc id=8272764, old score=0, new score=0, old rank=35, new rank=46
 
-Query id=182539, Doc id=8800556, old score=0, new score=0, old rank=44, new rank=53
+Query id=182539, Doc id=8800556, old score=0, new score=0, old rank=44, new rank=52
 
-Query id=182539, Doc id=1429933, old score=0, new score=0, old rank=54, new rank=62
+Query id=182539, Doc id=1429933, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=182539, Doc id=6105784, old score=0, new score=0, old rank=63, new rank=23
+Query id=182539, Doc id=6105784, old score=0, new score=0, old rank=63, new rank=62
 
-Query id=182539, Doc id=1597566, old score=0, new score=0, old rank=72, new rank=88
+Query id=182539, Doc id=1597566, old score=0, new score=0, old rank=72, new rank=87
 
 Query id=182539, Doc id=6553127, old score=0, new score=0, old rank=89, new rank=95
 
-Query id=182539, Doc id=669032, old score=0, new score=0, old rank=92, new rank=41
+Query id=182539, Doc id=669032, old score=0, new score=0, old rank=92, new rank=61
 
 Query id=183378, Doc id=719550, old score=0, new score=0, old rank=12, new rank=26
 
 Query id=183378, Doc id=5260519, old score=0, new score=0, old rank=21, new rank=32
 
-Query id=183378, Doc id=7423975, old score=0, new score=0, old rank=35, new rank=46
+Query id=183378, Doc id=7423975, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=183378, Doc id=826266, old score=0, new score=0, old rank=44, new rank=55
+Query id=183378, Doc id=826266, old score=0, new score=0, old rank=44, new rank=54
 
 Query id=183378, Doc id=749541, old score=0, new score=0, old rank=54, new rank=62
 
-Query id=183378, Doc id=145699, old score=0, new score=0, old rank=63, new rank=72
+Query id=183378, Doc id=145699, old score=0, new score=0, old rank=63, new rank=73
 
 Query id=183378, Doc id=6437304, old score=0, new score=0, old rank=72, new rank=84
 
@@ -238,17 +238,17 @@ Query id=207786, Doc id=8185061, old score=0, new score=0, old rank=21, new rank
 
 Query id=207786, Doc id=8211374, old score=0, new score=0, old rank=35, new rank=17
 
-Query id=207786, Doc id=8815851, old score=0, new score=0, old rank=44, new rank=55
+Query id=207786, Doc id=8815851, old score=0, new score=0, old rank=44, new rank=56
 
-Query id=207786, Doc id=6003357, old score=0, new score=0, old rank=54, new rank=66
+Query id=207786, Doc id=6003357, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=207786, Doc id=6526574, old score=0, new score=0, old rank=63, new rank=62
+Query id=207786, Doc id=6526574, old score=0, new score=0, old rank=63, new rank=70
 
 Query id=207786, Doc id=6298199, old score=0, new score=0, old rank=72, new rank=84
 
-Query id=207786, Doc id=3110940, old score=0, new score=0, old rank=89, new rank=97
+Query id=207786, Doc id=3110940, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=207786, Doc id=3322527, old score=0, new score=0, old rank=92, new rank=19
+Query id=207786, Doc id=3322527, old score=0, new score=0, old rank=92, new rank=20
 
 Query id=264014, Doc id=8008355, old score=0, new score=0, old rank=12, new rank=22
 
@@ -272,87 +272,87 @@ Query id=359349, Doc id=8016167, old score=0, new score=0, old rank=12, new rank
 
 Query id=359349, Doc id=7216147, old score=0, new score=0, old rank=21, new rank=16
 
-Query id=359349, Doc id=73119, old score=0, new score=0, old rank=35, new rank=43
+Query id=359349, Doc id=73119, old score=0, new score=0, old rank=35, new rank=45
 
 Query id=359349, Doc id=8613888, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=359349, Doc id=6108722, old score=0, new score=0, old rank=54, new rank=31
+Query id=359349, Doc id=6108722, old score=0, new score=0, old rank=54, new rank=52
 
-Query id=359349, Doc id=15807, old score=0, new score=0, old rank=63, new rank=20
+Query id=359349, Doc id=15807, old score=0, new score=0, old rank=63, new rank=40
 
-Query id=359349, Doc id=661506, old score=0, new score=0, old rank=72, new rank=78
+Query id=359349, Doc id=661506, old score=0, new score=0, old rank=72, new rank=79
 
 Query id=359349, Doc id=3076647, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=359349, Doc id=2259899, old score=0, new score=0, old rank=92, new rank=61
+Query id=359349, Doc id=2259899, old score=0, new score=0, old rank=92, new rank=62
 
-Query id=405717, Doc id=7170631, old score=0, new score=0, old rank=12, new rank=18
+Query id=405717, Doc id=7170631, old score=0, new score=0, old rank=12, new rank=17
 
-Query id=405717, Doc id=7288995, old score=0, new score=0, old rank=21, new rank=31
+Query id=405717, Doc id=7288995, old score=0, new score=0, old rank=21, new rank=35
 
 Query id=405717, Doc id=5354529, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=405717, Doc id=8673738, old score=0, new score=0, old rank=44, new rank=54
+Query id=405717, Doc id=8673738, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=405717, Doc id=8791349, old score=0, new score=0, old rank=54, new rank=63
+Query id=405717, Doc id=8791349, old score=0, new score=0, old rank=54, new rank=64
 
 Query id=405717, Doc id=7565118, old score=0, new score=0, old rank=63, new rank=74
 
-Query id=405717, Doc id=6521915, old score=0, new score=0, old rank=72, new rank=42
+Query id=405717, Doc id=6521915, old score=0, new score=0, old rank=72, new rank=72
 
 Query id=405717, Doc id=1662729, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=405717, Doc id=305214, old score=0, new score=0, old rank=92, new rank=53
+Query id=405717, Doc id=305214, old score=0, new score=0, old rank=92, new rank=52
 
-Query id=443396, Doc id=519923, old score=0, new score=0, old rank=12, new rank=14
+Query id=443396, Doc id=519923, old score=0, new score=0, old rank=12, new rank=15
 
-Query id=443396, Doc id=5246680, old score=0, new score=0, old rank=21, new rank=15
+Query id=443396, Doc id=5246680, old score=0, new score=0, old rank=21, new rank=14
 
-Query id=443396, Doc id=7429757, old score=0, new score=0, old rank=35, new rank=50
+Query id=443396, Doc id=7429757, old score=0, new score=0, old rank=35, new rank=46
 
-Query id=443396, Doc id=7479141, old score=0, new score=0, old rank=44, new rank=24
+Query id=443396, Doc id=7479141, old score=0, new score=0, old rank=44, new rank=52
 
-Query id=443396, Doc id=8769481, old score=0, new score=0, old rank=54, new rank=59
+Query id=443396, Doc id=8769481, old score=0, new score=0, old rank=54, new rank=22
 
 Query id=443396, Doc id=8399428, old score=0, new score=0, old rank=63, new rank=77
 
-Query id=443396, Doc id=1474815, old score=0, new score=0, old rank=72, new rank=72
+Query id=443396, Doc id=1474815, old score=0, new score=0, old rank=72, new rank=87
 
-Query id=443396, Doc id=1588967, old score=0, new score=0, old rank=89, new rank=96
+Query id=443396, Doc id=1588967, old score=0, new score=0, old rank=89, new rank=95
 
-Query id=443396, Doc id=6588314, old score=0, new score=0, old rank=92, new rank=71
+Query id=443396, Doc id=6588314, old score=0, new score=0, old rank=92, new rank=65
 
-Query id=451602, Doc id=8485131, old score=0, new score=0, old rank=12, new rank=21
+Query id=451602, Doc id=8485131, old score=0, new score=0, old rank=12, new rank=23
 
-Query id=451602, Doc id=8540468, old score=0, new score=0, old rank=21, new rank=16
+Query id=451602, Doc id=8540468, old score=0, new score=0, old rank=21, new rank=12
 
 Query id=451602, Doc id=8214454, old score=0, new score=0, old rank=35, new rank=41
 
 Query id=451602, Doc id=8288746, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=451602, Doc id=5538945, old score=0, new score=0, old rank=54, new rank=65
+Query id=451602, Doc id=5538945, old score=0, new score=0, old rank=54, new rank=20
 
-Query id=451602, Doc id=5987226, old score=0, new score=0, old rank=63, new rank=74
+Query id=451602, Doc id=5987226, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=451602, Doc id=1438925, old score=0, new score=0, old rank=72, new rank=84
+Query id=451602, Doc id=1438925, old score=0, new score=0, old rank=72, new rank=81
 
 Query id=451602, Doc id=647672, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=451602, Doc id=6164534, old score=0, new score=0, old rank=92, new rank=64
+Query id=451602, Doc id=6164534, old score=0, new score=0, old rank=92, new rank=84
 
 Query id=489204, Doc id=8510251, old score=0, new score=0, old rank=12, new rank=23
 
-Query id=489204, Doc id=855967, old score=0, new score=0, old rank=21, new rank=34
+Query id=489204, Doc id=855967, old score=0, new score=0, old rank=21, new rank=33
 
-Query id=489204, Doc id=535374, old score=0, new score=0, old rank=35, new rank=47
+Query id=489204, Doc id=535374, old score=0, new score=0, old rank=35, new rank=46
 
 Query id=489204, Doc id=8257229, old score=0, new score=0, old rank=44, new rank=59
 
 Query id=489204, Doc id=8375539, old score=0, new score=0, old rank=54, new rank=70
 
-Query id=489204, Doc id=1410250, old score=0, new score=0, old rank=63, new rank=71
+Query id=489204, Doc id=1410250, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=489204, Doc id=1475412, old score=0, new score=0, old rank=72, new rank=82
+Query id=489204, Doc id=1475412, old score=0, new score=0, old rank=72, new rank=62
 
 Query id=489204, Doc id=151833, old score=0, new score=0, old rank=89, new rank=99
 
@@ -362,35 +362,35 @@ Query id=490595, Doc id=8406241, old score=0, new score=0, old rank=12, new rank
 
 Query id=490595, Doc id=4842891, old score=0, new score=0, old rank=21, new rank=14
 
-Query id=490595, Doc id=8160570, old score=0, new score=0, old rank=35, new rank=49
+Query id=490595, Doc id=8160570, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=490595, Doc id=8235694, old score=0, new score=0, old rank=44, new rank=56
+Query id=490595, Doc id=8235694, old score=0, new score=0, old rank=44, new rank=52
 
-Query id=490595, Doc id=8307496, old score=0, new score=0, old rank=54, new rank=65
+Query id=490595, Doc id=8307496, old score=0, new score=0, old rank=54, new rank=63
 
-Query id=490595, Doc id=6461137, old score=0, new score=0, old rank=63, new rank=35
+Query id=490595, Doc id=6461137, old score=0, new score=0, old rank=63, new rank=32
 
 Query id=490595, Doc id=1707411, old score=0, new score=0, old rank=72, new rank=89
 
-Query id=490595, Doc id=1788696, old score=0, new score=0, old rank=89, new rank=97
+Query id=490595, Doc id=1788696, old score=0, new score=0, old rank=89, new rank=95
 
-Query id=490595, Doc id=313479, old score=0, new score=0, old rank=92, new rank=43
+Query id=490595, Doc id=313479, old score=0, new score=0, old rank=92, new rank=59
 
-Query id=527433, Doc id=8530720, old score=0, new score=0, old rank=12, new rank=25
+Query id=527433, Doc id=8530720, old score=0, new score=0, old rank=12, new rank=23
 
 Query id=527433, Doc id=5331572, old score=0, new score=0, old rank=21, new rank=33
 
-Query id=527433, Doc id=542047, old score=0, new score=0, old rank=35, new rank=45
+Query id=527433, Doc id=542047, old score=0, new score=0, old rank=35, new rank=46
 
-Query id=527433, Doc id=8322921, old score=0, new score=0, old rank=44, new rank=60
+Query id=527433, Doc id=8322921, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=527433, Doc id=6390703, old score=0, new score=0, old rank=54, new rank=64
+Query id=527433, Doc id=6390703, old score=0, new score=0, old rank=54, new rank=66
 
 Query id=527433, Doc id=6038414, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=527433, Doc id=1511551, old score=0, new score=0, old rank=72, new rank=14
+Query id=527433, Doc id=1511551, old score=0, new score=0, old rank=72, new rank=61
 
-Query id=527433, Doc id=1632548, old score=0, new score=0, old rank=89, new rank=100
+Query id=527433, Doc id=1632548, old score=0, new score=0, old rank=89, new rank=99
 
 Query id=527433, Doc id=6667278, old score=0, new score=0, old rank=92, new rank=73
 
@@ -398,41 +398,41 @@ Query id=573724, Doc id=8441639, old score=0, new score=0, old rank=12, new rank
 
 Query id=573724, Doc id=5962423, old score=0, new score=0, old rank=21, new rank=13
 
-Query id=573724, Doc id=8110336, old score=0, new score=0, old rank=35, new rank=44
+Query id=573724, Doc id=8110336, old score=0, new score=0, old rank=35, new rank=45
 
 Query id=573724, Doc id=5306910, old score=0, new score=0, old rank=44, new rank=51
 
 Query id=573724, Doc id=8310146, old score=0, new score=0, old rank=54, new rank=68
 
-Query id=573724, Doc id=5516331, old score=0, new score=0, old rank=63, new rank=21
+Query id=573724, Doc id=5516331, old score=0, new score=0, old rank=63, new rank=44
 
 Query id=573724, Doc id=950150, old score=0, new score=0, old rank=72, new rank=20
 
-Query id=573724, Doc id=1593660, old score=0, new score=0, old rank=89, new rank=97
+Query id=573724, Doc id=1593660, old score=0, new score=0, old rank=89, new rank=98
 
 Query id=573724, Doc id=162145, old score=0, new score=0, old rank=92, new rank=82
 
-Query id=833860, Doc id=8431359, old score=0, new score=0, old rank=12, new rank=15
+Query id=833860, Doc id=8431359, old score=0, new score=0, old rank=12, new rank=23
 
 Query id=833860, Doc id=8471763, old score=0, new score=0, old rank=21, new rank=11
 
 Query id=833860, Doc id=8155438, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=833860, Doc id=8235304, old score=0, new score=0, old rank=44, new rank=54
+Query id=833860, Doc id=8235304, old score=0, new score=0, old rank=44, new rank=53
 
-Query id=833860, Doc id=7508039, old score=0, new score=0, old rank=54, new rank=61
+Query id=833860, Doc id=7508039, old score=0, new score=0, old rank=54, new rank=64
 
 Query id=833860, Doc id=8780072, old score=0, new score=0, old rank=63, new rank=62
 
 Query id=833860, Doc id=6327370, old score=0, new score=0, old rank=72, new rank=84
 
-Query id=833860, Doc id=6032404, old score=0, new score=0, old rank=89, new rank=94
+Query id=833860, Doc id=6032404, old score=0, new score=0, old rank=89, new rank=93
 
-Query id=833860, Doc id=1634935, old score=0, new score=0, old rank=92, new rank=68
+Query id=833860, Doc id=1634935, old score=0, new score=0, old rank=92, new rank=70
 
 Query id=915593, Doc id=8402968, old score=0, new score=0, old rank=12, new rank=14
 
-Query id=915593, Doc id=8103068, old score=0, new score=0, old rank=21, new rank=17
+Query id=915593, Doc id=8103068, old score=0, new score=0, old rank=21, new rank=18
 
 Query id=915593, Doc id=7300335, old score=0, new score=0, old rank=35, new rank=45
 
@@ -442,43 +442,43 @@ Query id=915593, Doc id=552905, old score=0, new score=0, old rank=54, new rank=
 
 Query id=915593, Doc id=8402969, old score=0, new score=0, old rank=63, new rank=15
 
-Query id=915593, Doc id=6521993, old score=0, new score=0, old rank=72, new rank=23
+Query id=915593, Doc id=6521993, old score=0, new score=0, old rank=72, new rank=31
 
 Query id=915593, Doc id=623163, old score=0, new score=0, old rank=89, new rank=93
 
 Query id=915593, Doc id=670481, old score=0, new score=0, old rank=92, new rank=64
 
-Query id=962179, Doc id=7260575, old score=0, new score=0, old rank=12, new rank=22
+Query id=962179, Doc id=7260575, old score=0, new score=0, old rank=12, new rank=21
 
-Query id=962179, Doc id=8114938, old score=0, new score=0, old rank=21, new rank=17
+Query id=962179, Doc id=8114938, old score=0, new score=0, old rank=21, new rank=22
 
 Query id=962179, Doc id=7360203, old score=0, new score=0, old rank=35, new rank=45
 
 Query id=962179, Doc id=5427065, old score=0, new score=0, old rank=44, new rank=52
 
-Query id=962179, Doc id=8785372, old score=0, new score=0, old rank=54, new rank=16
+Query id=962179, Doc id=8785372, old score=0, new score=0, old rank=54, new rank=14
 
-Query id=962179, Doc id=902365, old score=0, new score=0, old rank=63, new rank=63
+Query id=962179, Doc id=902365, old score=0, new score=0, old rank=63, new rank=71
 
-Query id=962179, Doc id=651112, old score=0, new score=0, old rank=72, new rank=85
+Query id=962179, Doc id=651112, old score=0, new score=0, old rank=72, new rank=67
 
-Query id=962179, Doc id=6229150, old score=0, new score=0, old rank=89, new rank=94
+Query id=962179, Doc id=6229150, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=962179, Doc id=181089, old score=0, new score=0, old rank=92, new rank=62
+Query id=962179, Doc id=181089, old score=0, new score=0, old rank=92, new rank=72
 
-Query id=1037798, Doc id=5175277, old score=0, new score=0, old rank=12, new rank=23
+Query id=1037798, Doc id=5175277, old score=0, new score=0, old rank=12, new rank=24
 
-Query id=1037798, Doc id=7337918, old score=0, new score=0, old rank=21, new rank=40
+Query id=1037798, Doc id=7337918, old score=0, new score=0, old rank=21, new rank=33
 
-Query id=1037798, Doc id=8200339, old score=0, new score=0, old rank=35, new rank=48
+Query id=1037798, Doc id=8200339, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=1037798, Doc id=8676394, old score=0, new score=0, old rank=44, new rank=18
+Query id=1037798, Doc id=8676394, old score=0, new score=0, old rank=44, new rank=42
 
-Query id=1037798, Doc id=8800181, old score=0, new score=0, old rank=54, new rank=51
+Query id=1037798, Doc id=8800181, old score=0, new score=0, old rank=54, new rank=21
 
-Query id=1037798, Doc id=1464455, old score=0, new score=0, old rank=63, new rank=77
+Query id=1037798, Doc id=1464455, old score=0, new score=0, old rank=63, new rank=76
 
-Query id=1037798, Doc id=1482667, old score=0, new score=0, old rank=72, new rank=75
+Query id=1037798, Doc id=1482667, old score=0, new score=0, old rank=72, new rank=74
 
 Query id=1037798, Doc id=6279828, old score=0, new score=0, old rank=89, new rank=96
 
@@ -486,15 +486,15 @@ Query id=1037798, Doc id=2196879, old score=0, new score=0, old rank=92, new ran
 
 Query id=1063750, Doc id=8456549, old score=0, new score=0, old rank=12, new rank=21
 
-Query id=1063750, Doc id=8079316, old score=0, new score=0, old rank=21, new rank=18
+Query id=1063750, Doc id=8079316, old score=0, new score=0, old rank=21, new rank=20
 
-Query id=1063750, Doc id=5307035, old score=0, new score=0, old rank=35, new rank=42
+Query id=1063750, Doc id=5307035, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=1063750, Doc id=7473742, old score=0, new score=0, old rank=44, new rank=60
+Query id=1063750, Doc id=7473742, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=1063750, Doc id=8733470, old score=0, new score=0, old rank=54, new rank=63
+Query id=1063750, Doc id=8733470, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=1063750, Doc id=5543890, old score=0, new score=0, old rank=63, new rank=62
+Query id=1063750, Doc id=5543890, old score=0, new score=0, old rank=63, new rank=63
 
 Query id=1063750, Doc id=6093907, old score=0, new score=0, old rank=72, new rank=12
 
@@ -504,21 +504,21 @@ Query id=1063750, Doc id=167299, old score=0, new score=0, old rank=92, new rank
 
 Query id=1103812, Doc id=8212989, old score=0, new score=0, old rank=12, new rank=20
 
-Query id=1103812, Doc id=7383481, old score=0, new score=0, old rank=21, new rank=31
+Query id=1103812, Doc id=7383481, old score=0, new score=0, old rank=21, new rank=32
 
 Query id=1103812, Doc id=1679945, old score=0, new score=0, old rank=35, new rank=15
 
-Query id=1103812, Doc id=8733290, old score=0, new score=0, old rank=44, new rank=57
+Query id=1103812, Doc id=8733290, old score=0, new score=0, old rank=44, new rank=56
 
-Query id=1103812, Doc id=8399973, old score=0, new score=0, old rank=54, new rank=63
+Query id=1103812, Doc id=8399973, old score=0, new score=0, old rank=54, new rank=65
 
-Query id=1103812, Doc id=999313, old score=0, new score=0, old rank=63, new rank=80
+Query id=1103812, Doc id=999313, old score=0, new score=0, old rank=63, new rank=76
 
-Query id=1103812, Doc id=1659850, old score=0, new score=0, old rank=72, new rank=44
+Query id=1103812, Doc id=1659850, old score=0, new score=0, old rank=72, new rank=70
 
-Query id=1103812, Doc id=3062055, old score=0, new score=0, old rank=89, new rank=100
+Query id=1103812, Doc id=3062055, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=1103812, Doc id=3591090, old score=0, new score=0, old rank=92, new rank=21
+Query id=1103812, Doc id=3591090, old score=0, new score=0, old rank=92, new rank=41
 
 Query id=1106007, Doc id=7148689, old score=0, new score=0, old rank=12, new rank=25
 
@@ -528,13 +528,13 @@ Query id=1106007, Doc id=8204459, old score=0, new score=0, old rank=35, new ran
 
 Query id=1106007, Doc id=5434102, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=1106007, Doc id=548435, old score=0, new score=0, old rank=54, new rank=62
+Query id=1106007, Doc id=548435, old score=0, new score=0, old rank=54, new rank=61
 
-Query id=1106007, Doc id=600704, old score=0, new score=0, old rank=63, new rank=70
+Query id=1106007, Doc id=600704, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=1106007, Doc id=6216689, old score=0, new score=0, old rank=72, new rank=61
+Query id=1106007, Doc id=6216689, old score=0, new score=0, old rank=72, new rank=51
 
-Query id=1106007, Doc id=6236627, old score=0, new score=0, old rank=89, new rank=97
+Query id=1106007, Doc id=6236627, old score=0, new score=0, old rank=89, new rank=96
 
 Query id=1106007, Doc id=3064640, old score=0, new score=0, old rank=92, new rank=93
 
@@ -548,103 +548,103 @@ Query id=1110199, Doc id=8679776, old score=0, new score=0, old rank=44, new ran
 
 Query id=1110199, Doc id=8299269, old score=0, new score=0, old rank=54, new rank=54
 
-Query id=1110199, Doc id=8747520, old score=0, new score=0, old rank=63, new rank=71
+Query id=1110199, Doc id=8747520, old score=0, new score=0, old rank=63, new rank=72
 
-Query id=1110199, Doc id=933057, old score=0, new score=0, old rank=72, new rank=85
+Query id=1110199, Doc id=933057, old score=0, new score=0, old rank=72, new rank=89
 
-Query id=1110199, Doc id=1484050, old score=0, new score=0, old rank=89, new rank=94
+Query id=1110199, Doc id=1484050, old score=0, new score=0, old rank=89, new rank=95
 
 Query id=1110199, Doc id=6505410, old score=0, new score=0, old rank=92, new rank=93
 
-Query id=1112341, Doc id=8032277, old score=0, new score=0, old rank=12, new rank=22
+Query id=1112341, Doc id=8032277, old score=0, new score=0, old rank=12, new rank=21
 
-Query id=1112341, Doc id=8624811, old score=0, new score=0, old rank=21, new rank=18
+Query id=1112341, Doc id=8624811, old score=0, new score=0, old rank=21, new rank=19
 
 Query id=1112341, Doc id=8663097, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=1112341, Doc id=8773882, old score=0, new score=0, old rank=44, new rank=56
+Query id=1112341, Doc id=8773882, old score=0, new score=0, old rank=44, new rank=54
 
 Query id=1112341, Doc id=5994302, old score=0, new score=0, old rank=54, new rank=63
 
-Query id=1112341, Doc id=1503964, old score=0, new score=0, old rank=63, new rank=72
+Query id=1112341, Doc id=1503964, old score=0, new score=0, old rank=63, new rank=73
 
-Query id=1112341, Doc id=6143009, old score=0, new score=0, old rank=72, new rank=17
+Query id=1112341, Doc id=6143009, old score=0, new score=0, old rank=72, new rank=18
 
-Query id=1112341, Doc id=1707314, old score=0, new score=0, old rank=89, new rank=82
+Query id=1112341, Doc id=1707314, old score=0, new score=0, old rank=89, new rank=85
 
-Query id=1112341, Doc id=2209048, old score=0, new score=0, old rank=92, new rank=90
+Query id=1112341, Doc id=2209048, old score=0, new score=0, old rank=92, new rank=15
 
 Query id=1113437, Doc id=723853, old score=0, new score=0, old rank=12, new rank=23
 
-Query id=1113437, Doc id=8503450, old score=0, new score=0, old rank=21, new rank=20
+Query id=1113437, Doc id=8503450, old score=0, new score=0, old rank=21, new rank=19
 
-Query id=1113437, Doc id=5362616, old score=0, new score=0, old rank=35, new rank=45
+Query id=1113437, Doc id=5362616, old score=0, new score=0, old rank=35, new rank=43
 
 Query id=1113437, Doc id=8714674, old score=0, new score=0, old rank=44, new rank=55
 
-Query id=1113437, Doc id=8729214, old score=0, new score=0, old rank=54, new rank=51
+Query id=1113437, Doc id=8729214, old score=0, new score=0, old rank=54, new rank=61
 
 Query id=1113437, Doc id=5546290, old score=0, new score=0, old rank=63, new rank=71
 
-Query id=1113437, Doc id=6021900, old score=0, new score=0, old rank=72, new rank=62
+Query id=1113437, Doc id=6021900, old score=0, new score=0, old rank=72, new rank=46
 
-Query id=1113437, Doc id=1533641, old score=0, new score=0, old rank=89, new rank=93
+Query id=1113437, Doc id=1533641, old score=0, new score=0, old rank=89, new rank=100
 
-Query id=1113437, Doc id=6174327, old score=0, new score=0, old rank=92, new rank=64
+Query id=1113437, Doc id=6174327, old score=0, new score=0, old rank=92, new rank=52
 
-Query id=1114646, Doc id=8053439, old score=0, new score=0, old rank=12, new rank=23
+Query id=1114646, Doc id=8053439, old score=0, new score=0, old rank=12, new rank=22
 
 Query id=1114646, Doc id=8117092, old score=0, new score=0, old rank=21, new rank=13
 
 Query id=1114646, Doc id=530687, old score=0, new score=0, old rank=35, new rank=42
 
-Query id=1114646, Doc id=8622621, old score=0, new score=0, old rank=44, new rank=56
+Query id=1114646, Doc id=8622621, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=1114646, Doc id=8296387, old score=0, new score=0, old rank=54, new rank=66
+Query id=1114646, Doc id=8296387, old score=0, new score=0, old rank=54, new rank=65
 
-Query id=1114646, Doc id=833661, old score=0, new score=0, old rank=63, new rank=21
+Query id=1114646, Doc id=833661, old score=0, new score=0, old rank=63, new rank=32
 
-Query id=1114646, Doc id=5558259, old score=0, new score=0, old rank=72, new rank=17
+Query id=1114646, Doc id=5558259, old score=0, new score=0, old rank=72, new rank=18
 
 Query id=1114646, Doc id=6112725, old score=0, new score=0, old rank=89, new rank=89
 
 Query id=1114646, Doc id=6265763, old score=0, new score=0, old rank=92, new rank=92
 
-Query id=1114819, Doc id=5196819, old score=0, new score=0, old rank=12, new rank=22
+Query id=1114819, Doc id=5196819, old score=0, new score=0, old rank=12, new rank=25
 
-Query id=1114819, Doc id=8115439, old score=0, new score=0, old rank=21, new rank=13
+Query id=1114819, Doc id=8115439, old score=0, new score=0, old rank=21, new rank=12
 
-Query id=1114819, Doc id=5281617, old score=0, new score=0, old rank=35, new rank=45
+Query id=1114819, Doc id=5281617, old score=0, new score=0, old rank=35, new rank=50
 
-Query id=1114819, Doc id=8638237, old score=0, new score=0, old rank=44, new rank=53
+Query id=1114819, Doc id=8638237, old score=0, new score=0, old rank=44, new rank=55
 
-Query id=1114819, Doc id=8754399, old score=0, new score=0, old rank=54, new rank=63
+Query id=1114819, Doc id=8754399, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=1114819, Doc id=988369, old score=0, new score=0, old rank=63, new rank=77
+Query id=1114819, Doc id=988369, old score=0, new score=0, old rank=63, new rank=78
 
 Query id=1114819, Doc id=1598325, old score=0, new score=0, old rank=72, new rank=82
 
 Query id=1114819, Doc id=1613508, old score=0, new score=0, old rank=89, new rank=98
 
-Query id=1114819, Doc id=1738243, old score=0, new score=0, old rank=92, new rank=18
+Query id=1114819, Doc id=1738243, old score=0, new score=0, old rank=92, new rank=21
 
-Query id=1115776, Doc id=5175846, old score=0, new score=0, old rank=12, new rank=17
+Query id=1115776, Doc id=5175846, old score=0, new score=0, old rank=12, new rank=18
 
 Query id=1115776, Doc id=8106324, old score=0, new score=0, old rank=21, new rank=11
 
-Query id=1115776, Doc id=8111311, old score=0, new score=0, old rank=35, new rank=33
+Query id=1115776, Doc id=8111311, old score=0, new score=0, old rank=35, new rank=22
 
-Query id=1115776, Doc id=7335273, old score=0, new score=0, old rank=44, new rank=43
+Query id=1115776, Doc id=7335273, old score=0, new score=0, old rank=44, new rank=54
 
-Query id=1115776, Doc id=8689249, old score=0, new score=0, old rank=54, new rank=67
+Query id=1115776, Doc id=8689249, old score=0, new score=0, old rank=54, new rank=63
 
-Query id=1115776, Doc id=7543164, old score=0, new score=0, old rank=63, new rank=60
+Query id=1115776, Doc id=7543164, old score=0, new score=0, old rank=63, new rank=78
 
-Query id=1115776, Doc id=896023, old score=0, new score=0, old rank=72, new rank=44
+Query id=1115776, Doc id=896023, old score=0, new score=0, old rank=72, new rank=42
 
 Query id=1115776, Doc id=6010347, old score=0, new score=0, old rank=89, new rank=99
 
-Query id=1115776, Doc id=6397842, old score=0, new score=0, old rank=92, new rank=71
+Query id=1115776, Doc id=6397842, old score=0, new score=0, old rank=92, new rank=47
 
 Query id=1117099, Doc id=7135553, old score=0, new score=0, old rank=12, new rank=22
 
@@ -652,9 +652,9 @@ Query id=1117099, Doc id=8714082, old score=0, new score=0, old rank=21, new ran
 
 Query id=1117099, Doc id=5377579, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=1117099, Doc id=8366009, old score=0, new score=0, old rank=44, new rank=57
+Query id=1117099, Doc id=8366009, old score=0, new score=0, old rank=44, new rank=56
 
-Query id=1117099, Doc id=6343207, old score=0, new score=0, old rank=54, new rank=54
+Query id=1117099, Doc id=6343207, old score=0, new score=0, old rank=54, new rank=61
 
 Query id=1117099, Doc id=6452045, old score=0, new score=0, old rank=63, new rank=80
 
@@ -668,11 +668,11 @@ Query id=1121402, Doc id=5189910, old score=0, new score=0, old rank=12, new ran
 
 Query id=1121402, Doc id=852285, old score=0, new score=0, old rank=21, new rank=34
 
-Query id=1121402, Doc id=8542168, old score=0, new score=0, old rank=35, new rank=49
+Query id=1121402, Doc id=8542168, old score=0, new score=0, old rank=35, new rank=46
 
 Query id=1121402, Doc id=8644862, old score=0, new score=0, old rank=44, new rank=55
 
-Query id=1121402, Doc id=871253, old score=0, new score=0, old rank=54, new rank=66
+Query id=1121402, Doc id=871253, old score=0, new score=0, old rank=54, new rank=64
 
 Query id=1121402, Doc id=5538758, old score=0, new score=0, old rank=63, new rank=75
 
@@ -682,19 +682,19 @@ Query id=1121402, Doc id=6455116, old score=0, new score=0, old rank=89, new ran
 
 Query id=1121402, Doc id=1642502, old score=0, new score=0, old rank=92, new rank=97
 
-Query id=1124210, Doc id=8026735, old score=0, new score=0, old rank=12, new rank=14
+Query id=1124210, Doc id=8026735, old score=0, new score=0, old rank=12, new rank=17
 
 Query id=1124210, Doc id=7224102, old score=0, new score=0, old rank=21, new rank=13
 
-Query id=1124210, Doc id=8578085, old score=0, new score=0, old rank=35, new rank=45
+Query id=1124210, Doc id=8578085, old score=0, new score=0, old rank=35, new rank=42
 
-Query id=1124210, Doc id=7447312, old score=0, new score=0, old rank=44, new rank=53
+Query id=1124210, Doc id=7447312, old score=0, new score=0, old rank=44, new rank=57
 
-Query id=1124210, Doc id=5509214, old score=0, new score=0, old rank=54, new rank=69
+Query id=1124210, Doc id=5509214, old score=0, new score=0, old rank=54, new rank=64
 
-Query id=1124210, Doc id=1450462, old score=0, new score=0, old rank=63, new rank=31
+Query id=1124210, Doc id=1450462, old score=0, new score=0, old rank=63, new rank=24
 
-Query id=1124210, Doc id=6209133, old score=0, new score=0, old rank=72, new rank=23
+Query id=1124210, Doc id=6209133, old score=0, new score=0, old rank=72, new rank=89
 
 Query id=1124210, Doc id=6222368, old score=0, new score=0, old rank=89, new rank=98
 
@@ -702,29 +702,29 @@ Query id=1124210, Doc id=2236137, old score=0, new score=0, old rank=92, new ran
 
 Query id=1129237, Doc id=5222443, old score=0, new score=0, old rank=12, new rank=22
 
-Query id=1129237, Doc id=7246398, old score=0, new score=0, old rank=21, new rank=38
+Query id=1129237, Doc id=7246398, old score=0, new score=0, old rank=21, new rank=35
 
-Query id=1129237, Doc id=7350959, old score=0, new score=0, old rank=35, new rank=45
+Query id=1129237, Doc id=7350959, old score=0, new score=0, old rank=35, new rank=44
 
-Query id=1129237, Doc id=7459599, old score=0, new score=0, old rank=44, new rank=52
+Query id=1129237, Doc id=7459599, old score=0, new score=0, old rank=44, new rank=51
 
 Query id=1129237, Doc id=8762689, old score=0, new score=0, old rank=54, new rank=66
 
-Query id=1129237, Doc id=1420791, old score=0, new score=0, old rank=63, new rank=73
+Query id=1129237, Doc id=1420791, old score=0, new score=0, old rank=63, new rank=64
 
-Query id=1129237, Doc id=998747, old score=0, new score=0, old rank=72, new rank=80
+Query id=1129237, Doc id=998747, old score=0, new score=0, old rank=72, new rank=73
 
-Query id=1129237, Doc id=6194643, old score=0, new score=0, old rank=89, new rank=98
+Query id=1129237, Doc id=6194643, old score=0, new score=0, old rank=89, new rank=99
 
 Query id=1129237, Doc id=1793268, old score=0, new score=0, old rank=92, new rank=91
 
 Query id=1133167, Doc id=8033648, old score=0, new score=0, old rank=12, new rank=23
 
-Query id=1133167, Doc id=8160224, old score=0, new score=0, old rank=21, new rank=31
+Query id=1133167, Doc id=8160224, old score=0, new score=0, old rank=21, new rank=32
 
-Query id=1133167, Doc id=8250500, old score=0, new score=0, old rank=35, new rank=46
+Query id=1133167, Doc id=8250500, old score=0, new score=0, old rank=35, new rank=45
 
-Query id=1133167, Doc id=8722862, old score=0, new score=0, old rank=44, new rank=54
+Query id=1133167, Doc id=8722862, old score=0, new score=0, old rank=44, new rank=59
 
 Query id=1133167, Doc id=6022013, old score=0, new score=0, old rank=54, new rank=64
 
@@ -734,5 +734,5 @@ Query id=1133167, Doc id=6138, old score=0, new score=0, old rank=72, new rank=4
 
 Query id=1133167, Doc id=2283570, old score=0, new score=0, old rank=89, new rank=97
 
-Query id=1133167, Doc id=3136507, old score=0, new score=0, old rank=92, new rank=80
+Query id=1133167, Doc id=3136507, old score=0, new score=0, old rank=92, new rank=81
 

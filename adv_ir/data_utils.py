@@ -32,6 +32,8 @@ def pick_target_query_doc_and_best_scores(target_name='imitate.v2',
             run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.rank_vicuna_dl2019.csv'
         elif target_name == 'rank_zephyr':
             run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.rank_zephyr_dl2019.csv'
+        elif target_name == 'rg':
+            run_file = ranker_results_dir + '/runs.bert-large-uncased.public.bert.msmarco.rg_dl2019.csv'
         else:
             raise ValueError("Experiment name Error!")
     else:
